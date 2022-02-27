@@ -340,20 +340,46 @@ img {
 }
 .categories {
     padding: 5px 0;
+    .container {
+        @include _991px() {
+            padding: 0;
+        }
+    }
     ul {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         @include _991px() {
             justify-content: flex-start;
+            flex-wrap: nowrap;
+            width: 100%;
+            overflow-x: scroll;
+            padding: 10px 0 18px;
         }
         li {
             margin: 10px;
             @include _991px() {
-                margin: 4px 14px 4px 0;
+                margin: 4px 20px 0 0;
+                &:first-child {
+                    padding-left: 20px;
+                    @include _576px() {
+                        padding-left: 10px;
+                    }
+                }
             }
             a {
-                @include _desc('Source Sans Pro', 400, 14px, 18px, #000)
+                @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
+                span {
+                    display: none;
+                    @include _768px() {
+                        display: block;
+                    }
+                }
+                @include _991px() {
+                    display: flex;
+                    line-height: 14px;
+                    width: max-content;
+                }
             }
         }
     }
