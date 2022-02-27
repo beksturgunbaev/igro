@@ -1,5 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,900&family=Source+Sans+Pro:wght@400;600&display=swap');
 
+// Mixins for media queries:
+@mixin _1200px {
+    @media (max-width: 1200px) { @content; }
+}
+@mixin _1024px {
+    @media (max-width: 1024px) { @content; }
+}
+@mixin _991px {
+    @media (max-width: 991px) { @content; }
+}
+@mixin _890px {
+    @media (max-width: 890px) { @content; }
+}
+@mixin _768px {
+    @media (max-width: 768px) { @content; }
+}
+@mixin _576px {
+    @media (max-width: 576px) { @content; }
+}
+@mixin _460px {
+    @media (max-width: 460px) { @content; }
+}
+
 body {
     margin: 0;
     font-family: 'Montserrat';
@@ -36,6 +59,9 @@ input, select {
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    @include _576px() {
+        padding: 0 10px;
+    }
 }
 img {
     max-width: 100%;
@@ -48,6 +74,10 @@ img {
     color: #000;
     text-transform: uppercase;
     text-align: center;
+    @include _768px() {
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 // ===================> Mixins <=======================
 @mixin _btn($width, $height, $fz, $color, $back, $border, $bRadius, $textTrans) {
@@ -82,23 +112,72 @@ img {
 
 // Main pages stylies:
 #header {
-    padding: 15px 0;
+    padding: 15px 0 0;
+    position: relative;
+    z-index: 1000;
+    background: #fff;
+    @include _768px() {
+        padding: 10px 0 0;
+    }
     .top_menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
         .logo {
+            img {
+                @include _991px() {
+                    width: 50px;
+                }
+                @include _768px() {
+                    width: 40px;
+                }
+            }
             a {
                 display: flex;
                 align-items: center;
-                .log_txt {
+                .logo_txt {
                     max-width: 225px;
                     margin-left: 16px;
-                    @include _desc('Source Sans Pro', 400, 14px, 18px, #000)
+                    @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
+                    @include _991px {
+                        line-height: 14px;
+                        max-width: 150px;
+                        margin-left: 12px;
+                    }
                 }
             }
         }
+        .burger_menu {
+            display: none;
+            cursor: pointer;
+            @include _890px() {
+                display: block;
+            }
+            .burger_lines {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                width: 36px;
+                height: 24px;
+                .line {
+                    width: 100%;
+                    height: 2px;
+                    background: #000;
+                    border-radius: 4px;
+                    margin: 3px 0;
+                }
+            }
+            p {
+                font-size: 11px;
+                margin-top: 3px;
+                text-align: center;
+            }
+        }
         .menus_block {
+            @include _890px() {
+                display: none;
+            }
             ul {
                 display: flex;
                 justify-content: flex-end;
@@ -129,13 +208,23 @@ img {
                     background: #C4C4C4;
                     border-radius: 1px solid #C4C4C4;
                     margin: 0 20px;
+                    @include _1200px() {
+                        margin: 0 10px;
+                        height: 20px;
+                    }
                 }
                 .header_address {
                     @include _desc('Montserrat', 400, 14px, 18px, #000);
+                    @include _1200px() {
+                        font-size: 12px;
+                    }
                 }
                 .header_phone {
                     a {
                         @include _desc('Montserrat', 500, 14px, 18px, #000);
+                        @include _1200px() {
+                            font-size: 12px;
+                        }
                     }
                 }
                 .header_phone_ml {
@@ -144,10 +233,19 @@ img {
             }
         }
     }
-    .second_header_menu {
+}
+.menus_icon {
+    padding: 10px 0;
+    @include _890px() {
+        position: sticky;
+        background: #fff;
+        z-index: 999;
+        top: -1px;
+        box-shadow: -1px -12px 20px #000;
+    }
+    .header_menu {
         display: flex;
         align-items: flex-end;
-        padding-top: 20px;
         .search_div {
             width: 100%;
             form {
@@ -170,16 +268,28 @@ img {
             justify-content: flex-end;
             .icons_item {
                 margin-left: 20px;
-
+                select {
+                    @include _768px() {
+                        display: none
+                    }
+                }
                 p {
                     @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
+                    @include _768px() {
+                        display: none;
+                    }
                 }
             }
             .register {
                 width: 120px;
+                @include _768px() {
+                    width: auto;
+                }
             }
         }
     }
+}
+.header_about {
     .third_header {
         display: flex;
         justify-content: space-between;
@@ -187,12 +297,22 @@ img {
         background: #91A2A8;
         padding: 20px 30px;
         margin-top: 20px;
+        @include _890px() {
+            padding: 14px;
+        }
+        @include _768px() {
+            flex-direction: column;
+            align-items: flex-start;
+        }
         .third_header_item {
             display: flex;
             align-items: center;
+            @include _768px() {
+                margin: 10px 0;
+            }
             .third_header_icon {
-                width: 40px;
-                height: 40px;
+                min-width: 40px;
+                min-height: 40px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -212,19 +332,28 @@ img {
             width: 1px;
             background: #778A90;
             margin: 0 20px;
+            @include _768px() {
+                display: none;
+            }
         }
     }
-    .categories {
-        padding: 5px 0;
-        ul {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            li {
-                margin: 10px;
-                a {
-                    @include _desc('Source Sans Pro', 400, 14px, 18px, #000)
-                }
+}
+.categories {
+    padding: 5px 0;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include _991px() {
+            justify-content: flex-start;
+        }
+        li {
+            margin: 10px;
+            @include _991px() {
+                margin: 4px 14px 4px 0;
+            }
+            a {
+                @include _desc('Source Sans Pro', 400, 14px, 18px, #000)
             }
         }
     }
@@ -242,6 +371,9 @@ img {
             overflow: hidden;
             text-align: center;
             background: #F5F5F5;
+            @include _576px() {
+                width: 49%;
+            }
             &:first-child,
             &:nth-child(2) {
                 width: 49%;
@@ -266,12 +398,25 @@ img {
                 justify-content: center;
                 align-items: center;
                 @include _title(700, 22px, 27px, #fff, uppercase);
+                @include _768px() {
+                    min-height: 60px;
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+                @include _460px() {
+                    min-height: 40px;
+                    font-size: 11px;
+                    line-height: 14px;
+                }
             }
         }
     }
 }
 #product_slider {
     padding: 40px 0;
+    @include _576px() {
+        padding: 70px 0 40px;
+    }
     .container {
         position: relative;
         z-index: 1;
@@ -287,6 +432,9 @@ img {
             display: flex;
             justify-content: center;
             align-items: center;
+            @include _576px() {
+                top: -50px;
+            }
         }
         .right-arrow {
             right: 20px;
@@ -298,6 +446,10 @@ img {
             left: 20px;
             img {
                 transform: translate(10px, 0px);
+            }
+            @include _576px() {
+                left: auto;
+                right: 80px;
             }
         }
         .slider_wrapper {
@@ -326,6 +478,10 @@ img {
                 a {
                     @include _title(700, 16px, 20px, #000, uppercase);
                     text-align: center;
+                    @include _576px() {
+                        font-size: 12px;
+                        font-weight: 600;
+                    }
                 }
             }
         }
@@ -342,6 +498,9 @@ img {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                @include _576px() {
+                    margin: 10px 0;
+                }
                 &:first-child {
                     margin-left: 0;
                 }
@@ -349,10 +508,18 @@ img {
                     margin-right: 0;
                 }
                 .blocks_icon {
-                    text-align: center
+                    text-align: center;
+                    @include _576px() {
+                        width: 40px;
+                        margin: 0 auto 7px;
+                    }
                 }
                 h4 {
                     @include _title(700, 16px, 20px, #fff, uppercase);
+                    @include _576px() {
+                        font-size: 10px;
+                        line-height: 12px;
+                    }
                 }
             }
         }
@@ -361,17 +528,27 @@ img {
 #products {
     .products_div {
         display: flex;
+        justify-content: space-between;
         width: 100%;
         flex-wrap: wrap;
         .product {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 45%;
+            width: 49%;
             min-height: 320px;
             padding: 20px;
-            margin: 10px;
+            margin: 10px 0;
             background: #F5F5F5;
+            @include _991px() {
+                min-height: auto;
+            }
+            @include _768px() {
+                padding: 16px;
+            }
+            @include _576px() {
+                width: 100%;
+            }
             &:nth-child(3) {
                 background: transparent;
                 border: 1px solid #E0E0E0;
@@ -384,24 +561,56 @@ img {
                 max-width: 370px;
                 h5 {
                     @include _desc('Montserrat', 500, 14px, 17px, #000);
+                    @include _768px() {
+                        font-size: 13px;
+                        line-height: 16px;
+                    }
                 }
                 h3 {
                     @include _title(700, 20px, 32px, #000, uppercase);
                     margin: 10px 0 12px;
+                    @include _991px() {
+                        font-size: 16px;
+                        line-height: 21px;
+                        margin: 10px 0 7px;
+                    }
+                    @include _768px() {
+                        font-size: 13px;
+                        line-height: 16px;
+                        margin: 5px 0 7px;
+                    }
                 }
                 h6 {
                     max-width: 272px;
                     @include _desc('Montserrat', 400, 14px, 22px, #000);
+                    @include _991px() {
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
                 }
             }
             .product_img {
                 margin-left: 30px;
+                @include _1024px() {
+                    margin-left: 20px;
+                    min-width: 90px;
+                }
+                @include _768px() {
+                    margin-left: 7px;
+                    min-width: 60px;
+                }
+                @include _576px() {
+                    max-width: 100px;
+                }
             }
         }
     }
 }
 #brands {
     padding: 50px 0 40px;
+    @include _576px() {
+        padding: 30px 0;
+    }
     h3 {
         margin-bottom: 40px;
     }
@@ -428,14 +637,41 @@ img {
     .proff_wrap {
         display: flex;
         justify-content: space-between;
+        @include _768px() {
+            flex-wrap: wrap;
+            width: 100%;
+        }
         .proff_item {
             max-width: 260px;
             width: 100%;
+            margin: 0 10px;
+            @include _768px() {
+                max-width: inherit;
+                width: 47%;
+                margin-top: 6px;
+                margin-bottom: 10px;
+                &:nth-child(2n+1) {
+                    margin-left: 0;
+                }
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
             .proff_img {
                 margin-bottom: 7px;
             }
             a {
                 @include _desc('Montserrat', 500, 16px, 20px, #000);
+                @include _768px() {
+                    font-size: 14px;
+                    line-height: 16px;
+                }
             }
         }
     }
@@ -454,17 +690,42 @@ img {
         justify-content: space-between;
         align-items: center;
         margin: 20px 0;
+        @include _576px() {
+            flex-direction: column;
+        }
         .info_img {
             width: 49%;
+            @include _576px() {
+                width: 100%;
+            }
+        }
+        .mobile_cl {
+            @include _576px() {
+                order: -1;
+            }
         }
         .info_desc {
             width: 49%;
+            @include _576px() {
+                width: 100%;
+            }
             h3 {
                 @include _title(700, 24px, 34px, #000, uppercase);
                 margin-bottom: 5px;
+                @include _890px() {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+                @include _576px() {
+                    margin-top: 10px;
+                }
             }
             p {
                 @include _desc('Montserrat', 400, 20px, 32px, #000);
+                @include _890px() {
+                    font-size: 14px;
+                    line-height: 21px;
+                }
             }
         }
     }
@@ -473,16 +734,39 @@ img {
     padding: 40px 0 0;
     margin-bottom: 40px;
     background: #F5F5F5;
+    @include _1024px() {
+        display: flex;
+        align-items: flex-end;
+    }
     .access_wrap {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        @include _768px() {
+            display: block;
+        }
+        .access_img {
+            display: flex;
+            @include _768px() {
+                display: none;
+            }
+        }
         .access_desc {
             max-width: 596px;
             width: 100%;
             margin-left: 40px;
+            @include _1024px() {
+                margin-left: 0;
+                padding-bottom: 20px;
+            }
+            @include _768px() {
+                padding-bottom: 40px;
+            }
             h3 {
                 @include _title(700, 24px, 29px, #000, uppercase);
+                @include _1024px() {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
             }
             ul {
                 margin-left: 20px;
@@ -490,9 +774,17 @@ img {
                     list-style-type: disc;
                     margin: 14px 0;
                     @include _desc('Montserrat', 500, 18px, 22px, #000);
+                    @include _1024px() {
+                        font-size: 14px;
+                        line-height: 18px;
+                        margin: 10px 0;
+                    }
                 }
             }
             .access_btn {
+                @include _1024px() {
+                    margin-top: 18px;
+                }
                 button {
                     @include _btn( 168px, 40px, 14px, #333, transparent, 1px solid #333, none, Normal);
                     &:focus {
@@ -509,9 +801,18 @@ img {
             p {
                 @include _desc('Montserrat', 500, 14px, 18px, #000);
                 margin: 30px 0 20px;
+                @include _1024px() {
+                    font-size: 12px;
+                    line-height: 16px;
+                    margin: 14px 0 10px;
+                }
             }
             h4 {
                 @include _desc('Source Sans Pro', 600, 24px, 28px, #000);
+                @include _1024px() {
+                    font-size: 18px;
+                    line-height: 21px;
+                }
             }
         }
     }
@@ -523,12 +824,19 @@ footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @include _768px() {
+                flex-direction: column;
+                align-items: flex-start;
+            }
             .footer_search {
                 display: flex;
                 align-items: center;
                 width: 100%;
                 h5 {
                     @include _desc('Source Sans Pro', 600, 16px, 20px, #000);
+                    @include _576px() {
+                        display: none;
+                    }
                 }
                 input {
                     @include _desc('Source Sans Pro', 400, 12px, 15px, #000);
@@ -542,11 +850,15 @@ footer {
                     &:focus {
                         outline: none;
                     }
+                    @include _576px() {
+                        margin-left: 0;
+                    }
                 }
                 button {
                     @include _btn( 173px, 40px, 14px, #fff, #91A2A8, none, none, Normal);
                     cursor: pointer;
                     margin-left: 14px;
+                    padding: 0 12px;
                     &:hover {
                         opacity: .8;
                     }
@@ -559,6 +871,9 @@ footer {
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
+                @include _768px() {
+                    margin-top: 18px;
+                }
                 .footer_icon {
                     width: 40px;
                     height: 40px;
@@ -570,6 +885,11 @@ footer {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    @include _768px() {
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                    }
                 }
             }
         }
@@ -577,7 +897,17 @@ footer {
             padding-top: 70px;
             display: flex;
             justify-content: space-between;
+            @include _991px() {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            @include _576px() {
+                padding-top: 20px;
+            }
             .footer_menu_item {
+                @include _991px() {
+                    margin: 20px 20px 0 0;
+                }
                 h4 {
                     @include _desc('Montserrat', 600, 14px, 18px, #000);
                     margin-bottom: 4px;
@@ -614,8 +944,15 @@ footer {
             justify-content: space-between;
             align-items: center;
             padding-top: 80px;
+            @include _991px() {
+                display: block;
+                text-align: center
+            }
             p {
                 @include _desc('Montserrat', 500, 12px, 15px, #000);
+                @include _991px() {
+                    margin-bottom: 7px;
+                }
             }
             a {
                 @include _desc('Source Sans Pro', 500, 12px, 15px, #000);
