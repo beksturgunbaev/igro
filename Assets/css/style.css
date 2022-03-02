@@ -4,6 +4,11 @@ body {
   font-family: 'Montserrat';
 }
 
+body.no_scroll {
+  position: relative;
+  overflow-y: hidden;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -71,6 +76,121 @@ img {
     font-size: 20px;
     line-height: 28px;
   }
+}
+
+.modal {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal .mobile_menu {
+  width: 96%;
+  padding: 20px;
+  background: #fff;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.modal .mobile_menu.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal .mobile_menu .mobile_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal .mobile_menu .mobile_header .logo img {
+  width: 50px;
+}
+
+.modal .mobile_menu .mobile_header .close_btn {
+  cursor: pointer;
+  font-size: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+}
+
+.modal .mobile_menu ul {
+  padding-top: 20px;
+}
+
+.modal .mobile_menu ul li {
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal .mobile_menu ul li a {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #333;
+  text-decoration: underline;
+  width: 100%;
+}
+
+.modal .mobile_menu .mobile_contacts {
+  padding-top: 20px;
+}
+
+.modal .mobile_menu .mobile_contacts div a {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #333;
+}
+
+.modal .mobile_menu p {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333;
+  padding-top: 30px;
 }
 
 #header {

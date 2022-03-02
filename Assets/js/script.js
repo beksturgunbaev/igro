@@ -24,3 +24,21 @@ $(document).ready(function() {
         ]
     });
 });
+
+// Mobile menu:
+let burgerBtn = document.querySelector('.burger_menu'),
+    closeBtn = document.querySelector('.close_btn'),
+    modal = document.querySelector('.modal'),
+    mobileMenu = document.querySelector('.mobile_menu'),
+    bodyScroll = document.querySelector('body');
+
+burgerBtn.onclick = function() {
+    modal.classList.add('active');
+    mobileMenu.classList.add('active');
+    bodyScroll.classList.add('no_scroll');
+}
+closeBtn.onclick = function() {
+    modal.classList.remove('active');
+    mobileMenu.classList.remove('active');
+    bodyScroll.classList.remove('no_scroll');
+}
