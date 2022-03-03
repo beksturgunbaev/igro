@@ -1083,8 +1083,14 @@ footer {
         .lk_menus {
             justify-content: center;
             margin: 20px 0;
+            @include _768px() {
+                flex-wrap: wrap;
+            }
             li {
                 margin: 0 10px;
+                @include _768px() {
+                    margin: 10px;
+                }
                 a {
                     @include _desc('Montserrat', 400, 14px, 17px, #000);
                     &.active {
@@ -1112,6 +1118,9 @@ footer {
             margin: 40px auto 30px;
             border-radius: 7px;
             border: 4px solid #E0E0E0;
+            @include _768px() {
+                margin: 96px auto 30px;
+            }
             &::before {
                 content: '';
                 position: absolute;
@@ -1180,8 +1189,14 @@ footer {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
+            @include _768px() {
+                align-items: flex-start;
+            }
             h3 {
                 @include _desc('Montserrat', 700, 28px, 34px, #393939);
+                @include _768px() {
+                    padding-bottom: 10px;
+                }
             }
             .header_selects {
                 select {
@@ -1191,6 +1206,13 @@ footer {
                     height: 40px;
                     padding: 0 5px;
                     margin-left: 5px;
+                    @include _768px() {
+                        margin-left: 0;
+                        display: flex;
+                        margin-bottom: 10px;
+                        align-items: center;
+                        justify-content: center;
+                    }
                 }
             }
         }
@@ -1202,6 +1224,9 @@ footer {
                 background: #F2F2F2;
                 &:nth-child(2n) {
                     background: #fff;
+                }
+                @include _768px() {
+                    display: block;
                 }
                 td, th {
                     @include _desc('Source Sans Pro', 400, 14px, 12px, #4F4F4F);
@@ -1215,6 +1240,10 @@ footer {
                             margin-right: 5px;
                         }
                     }
+                    @include _768px() {
+                        display: flex;
+                        justify-content: space-between;
+                    }
                 }
                 th {
                     text-align: left;
@@ -1222,6 +1251,17 @@ footer {
                         padding: 16px 0 5px;
                         @include _desc('Montserrat', 700, 18px, 22px, #393939);
                     }
+                }
+                td {
+                    &::before {
+                        content: attr(data-label);
+                        @include _desc('Source Sans Pro', 400, 14px, 12px, #4F4F4F);
+                    }
+                }
+            }
+            .table_th {
+                @include _768px() {
+                    display: none;
                 }
             }
         }

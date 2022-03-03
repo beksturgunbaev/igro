@@ -1788,8 +1788,21 @@ footer .footer_wrap .footer_last_txt a {
   margin: 20px 0;
 }
 
+@media (max-width: 768px) {
+  .lk_block .links .lk_menus {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .lk_block .links .lk_menus li {
   margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .lk_block .links .lk_menus li {
+    margin: 10px;
+  }
 }
 
 .lk_block .links .lk_menus li a {
@@ -1832,6 +1845,12 @@ footer .footer_wrap .footer_last_txt a {
   margin: 40px auto 30px;
   border-radius: 7px;
   border: 4px solid #E0E0E0;
+}
+
+@media (max-width: 768px) {
+  .lk_block .diskaunt_graphic .graphic {
+    margin: 96px auto 30px;
+  }
 }
 
 .lk_block .diskaunt_graphic .graphic::before {
@@ -1936,12 +1955,26 @@ footer .footer_wrap .footer_last_txt a {
           align-items: flex-end;
 }
 
+@media (max-width: 768px) {
+  .lk_block .orders .orders_header {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .lk_block .orders .orders_header h3 {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 28px;
   line-height: 34px;
   color: #393939;
+}
+
+@media (max-width: 768px) {
+  .lk_block .orders .orders_header h3 {
+    padding-bottom: 10px;
+  }
 }
 
 .lk_block .orders .orders_header .header_selects select {
@@ -1957,6 +1990,22 @@ footer .footer_wrap .footer_last_txt a {
   margin-left: 5px;
 }
 
+@media (max-width: 768px) {
+  .lk_block .orders .orders_header .header_selects select {
+    margin-left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .lk_block .orders table {
   width: 100%;
   margin-top: 20px;
@@ -1969,6 +2018,12 @@ footer .footer_wrap .footer_last_txt a {
 
 .lk_block .orders table tr:nth-child(2n) {
   background: #fff;
+}
+
+@media (max-width: 768px) {
+  .lk_block .orders table tr {
+    display: block;
+  }
 }
 
 .lk_block .orders table tr td, .lk_block .orders table tr th {
@@ -1999,6 +2054,17 @@ footer .footer_wrap .footer_last_txt a {
   margin-right: 5px;
 }
 
+@media (max-width: 768px) {
+  .lk_block .orders table tr td, .lk_block .orders table tr th {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .lk_block .orders table tr th {
   text-align: left;
 }
@@ -2010,5 +2076,20 @@ footer .footer_wrap .footer_last_txt a {
   font-size: 18px;
   line-height: 22px;
   color: #393939;
+}
+
+.lk_block .orders table tr td::before {
+  content: attr(data-label);
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  color: #4F4F4F;
+}
+
+@media (max-width: 768px) {
+  .lk_block .orders table .table_th {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
