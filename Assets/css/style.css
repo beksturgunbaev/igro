@@ -1751,4 +1751,264 @@ footer .footer_wrap .footer_last_txt a {
   line-height: 15px;
   color: #000;
 }
+
+.lk_block {
+  padding: 0 0 30px;
+}
+
+.lk_block .links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lk_block .links ul li {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+
+.lk_block .links ul li a {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+
+.lk_block .links .lk_menus {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.lk_block .links .lk_menus li {
+  margin: 0 10px;
+}
+
+.lk_block .links .lk_menus li a {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000;
+}
+
+.lk_block .links .lk_menus li a.active {
+  text-decoration: underline;
+}
+
+.lk_block .diskaunt_graphic h4 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #393939;
+}
+
+.lk_block .diskaunt_graphic p {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: #393939;
+  padding-top: 7px;
+}
+
+.lk_block .diskaunt_graphic p span {
+  margin-left: 10px;
+}
+
+.lk_block .diskaunt_graphic .graphic {
+  position: relative;
+  max-width: 1073px;
+  width: 100%;
+  margin: 40px auto 30px;
+  border-radius: 7px;
+  border: 4px solid #E0E0E0;
+}
+
+.lk_block .diskaunt_graphic .graphic::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 55%;
+  border-radius: 7px;
+  border: 4px solid #019934;
+}
+
+.lk_block .diskaunt_graphic .graphic .graphic_item {
+  position: absolute;
+  top: -70px;
+  left: 24%;
+}
+
+.lk_block .diskaunt_graphic .graphic .graphic_item:nth-child(2) {
+  left: 55%;
+}
+
+.lk_block .diskaunt_graphic .graphic .graphic_item .graphic_prosent {
+  position: relative;
+  min-width: 58px;
+  min-height: 58px;
+  background: #91A2A8;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lk_block .diskaunt_graphic .graphic .graphic_item .graphic_prosent::before {
+  position: absolute;
+  top: 100%;
+  content: '';
+  height: 8px;
+  width: 2px;
+  background: #019934;
+}
+
+.lk_block .diskaunt_graphic .graphic .graphic_item .graphic_prosent p {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #fff;
+  padding: 0;
+  text-align: center;
+}
+
+.lk_block .diskaunt_graphic .graphic .graphic_item .graphic_prosent p span {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  margin-left: 0;
+}
+
+.lk_block .diskaunt_graphic .graphic .graphic_item .no_active::before {
+  background: #E0E0E0;
+}
+
+.lk_block .diskaunt_graphic .graphic .graphic_item h5 {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 12px;
+  color: #393939;
+  padding-top: 25px;
+}
+
+.lk_block .diskaunt_graphic .red_txt {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #EB5757;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.lk_block .orders {
+  padding: 40px 0;
+}
+
+.lk_block .orders .orders_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.lk_block .orders .orders_header h3 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  color: #393939;
+}
+
+.lk_block .orders .orders_header .header_selects select {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  color: #4F4F4F;
+  background: #F2F2F2;
+  width: 160px;
+  height: 40px;
+  padding: 0 5px;
+  margin-left: 5px;
+}
+
+.lk_block .orders table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.lk_block .orders table tr {
+  background: #F2F2F2;
+}
+
+.lk_block .orders table tr:nth-child(2n) {
+  background: #fff;
+}
+
+.lk_block .orders table tr td, .lk_block .orders table tr th {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  color: #4F4F4F;
+  padding: 7px;
+}
+
+.lk_block .orders table tr td a, .lk_block .orders table tr th a {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  color: #4F4F4F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #2D9CDB;
+}
+
+.lk_block .orders table tr td a svg, .lk_block .orders table tr th a svg {
+  margin-right: 5px;
+}
+
+.lk_block .orders table tr th {
+  text-align: left;
+}
+
+.lk_block .orders table tr th h3 {
+  padding: 16px 0 5px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #393939;
+}
 /*# sourceMappingURL=style.css.map */
