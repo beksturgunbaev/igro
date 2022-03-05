@@ -1390,4 +1390,116 @@ footer {
             }
         }
     }
+    .favourite {
+        display: flex;
+        @include _768px() {
+            display: block;
+        }
+        .fav_sidebar {
+            max-width: 240px;
+            width: 100%;
+            padding: 12px;
+            background: #FAFAFA;
+            margin-right: 20px;
+            @include _991px() {
+                max-width: 200px;
+            }
+            @include _768px() {
+                margin-bottom: 30px;
+            }
+            h4 {
+                @include _desc('Source Sans Pro', 600, 18px, 23px, #333);
+            }
+            h5 {
+                @include _desc('Source Sans Pro', 400, 14px, 18px, #333);
+                margin: 7px 0;
+            }
+            a {
+                @include _desc('Source Sans Pro', 400, 14px, 18px, #333);
+                text-decoration: underline;
+                color: #2F80ED;
+                margin-top: 20px;
+            }
+        }
+        .fav_content {
+            width: 100%;
+            .fav_content_header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+                @include _576px() {
+                    flex-direction: column;
+                    align-items: flex-end
+                }
+                h5 {
+                    @include _desc('Montserrat', 400, 18px, 22px, #393939);
+                    @include _576px() {
+                        margin-bottom: 10px;
+                    }
+                }
+                a {
+                    @include _desc('Source Sans Pro', 400, 14px, 18px, #2F80ED);
+                    text-decoration: underline;
+                }
+            }
+            .fav_products {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 100%;
+                .fav_product {
+                    width: 32%;
+                    margin: 8px 0;
+                    border: 1px solid #E0E0E0;
+                    text-align: center;
+                    padding: 14px;
+                    @include _890px() {
+                        width: 48%;
+                    }
+                    @include _991px() {
+                        padding: 14px 7px;
+                    }
+                    .fav_img {
+                        height: 214px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @include _576px() {
+                            height: 160px;
+                            img {
+                                height: 100%;
+                                padding-bottom: 10px;
+                            }
+                        }
+                    }
+                    h6 {
+                        @include _desc('Source Sans Pro', 400, 14px, 18px, #333333);
+                        margin: 7px 0 20px;
+                        @include _576px() {
+                            font-size: 12px;
+                            line-height: 16px;
+                            margin: 5px 0 10px;
+                        }
+                    }
+                    p {
+                        @include _desc('Source Sans Pro', 400, 12px, 16px, #828282);
+                    }
+                    h5{
+                        @include _desc('Source Sans Pro', 700, 14px, 18px, #000);
+                        margin-bottom: 7px;
+                    }
+                    h4 {
+                        @include _desc('Source Sans Pro', 700, 18px, 18px, #000);
+                        span {
+                            font-size: 12px;
+                            line-height: 16px;
+                            color: #828282;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
 }
