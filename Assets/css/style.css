@@ -2521,4 +2521,111 @@ footer .footer_wrap .footer_last_txt a {
   line-height: 16px;
   color: #828282;
 }
+
+.lk_block .discounts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.lk_block .discounts .disc_item {
+  width: 49%;
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.lk_block .discounts .disc_item h3 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #393939;
+}
+
+.lk_block .discounts .disc_item .default_desc {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #828282;
+  padding: 5px 0;
+}
+
+.lk_block .discounts .disc_item p {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 33px;
+  color: #393939;
+}
+
+.lk_block .discounts .disc_item .exclusive_brands {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.lk_block .discounts .disc_item .exclusive_brands span {
+  width: 33%;
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+}
+
+.lk_block .discounts .disc_item .exclusive_brands span:last-child {
+  color: #EB5757;
+}
+
+.lk_block .discounts .disc_item .retro_bonus {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 14px;
+  color: #1C5530;
+  padding: 5px 0;
+}
+
+.lk_block .discounts .disc_item .disc_sum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-top: 7px;
+  border-top: 1px solid #E0E0E0;
+  width: 100%;
+}
+
+.lk_block .discounts .disc_item .disc_sum h4 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000;
+}
 /*# sourceMappingURL=style.css.map */
