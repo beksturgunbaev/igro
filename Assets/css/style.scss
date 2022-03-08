@@ -2001,8 +2001,8 @@ footer {
                     }
                     @include _576px() {
                         max-width: 100%;
-                        flex: 0 0 48%;
-                        margin: 8px 0;
+                        flex: 0 0 48.5%;
+                        margin: 6px 0;
                     }
                     p {
                         @include _desc('Montserrat', 600, 14px, 18px, #000);
@@ -2086,9 +2086,9 @@ footer {
                     display: flex;
                     justify-content: space-between;
                     flex-direction: column;
-                    @include _460px() {
-                        flex: 0 0 48%;
-                        margin: 8px 0;
+                    @include _576px() {
+                        flex: 0 0 48.5%;
+                        margin: 6px 0;
                     }
                     a {
                         @include _desc('Montserrat', 500, 16px, 20px, #333);
