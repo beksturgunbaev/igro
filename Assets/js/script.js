@@ -59,3 +59,22 @@ closeBtn.onclick = function() {
     mobileMenu.classList.remove('active');
     bodyScroll.classList.remove('no_scroll');
 }
+
+// Accordion:
+const acc = document.getElementsByClassName("catalog_link");
+
+for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle('active');
+        let panel = this.nextElementSibling;
+        let icon = this.querySelector('svg');
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+            icon.classList.remove('active');
+
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+            icon.classList.add('active');
+        }
+    });
+}

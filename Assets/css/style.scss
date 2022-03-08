@@ -84,6 +84,26 @@ img {
         line-height: 28px;
     }
 }
+.default_btn {
+    background: #333;
+    a {
+        font-family: 'Source Sans Pro';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        width: 100%;
+        height: 40px;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s all;
+        &:hover {
+            opacity: .9;
+            text-decoration: none;
+        }
+    }
+}
 // ===================> Mixins <=======================
 @mixin _btn($width, $height, $fz, $color, $back, $border, $bRadius, $textTrans) {
     width: $width;
@@ -189,8 +209,42 @@ img {
         }
     }
 }
+.links {
+    ul {
+        display: flex;
+        align-items: center;
+        li {
+            @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
+            a {
+                @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
+            }
+        }
+    }
+    .lk_menus {
+        justify-content: center;
+        margin: 20px 0;
+        @include _768px() {
+            flex-wrap: wrap;
+        }
+        li {
+            margin: 0 10px;
+            @include _768px() {
+                margin: 10px;
+            }
+            a {
+                @include _desc('Montserrat', 400, 14px, 17px, #000);
+                &.active {
+                    text-decoration: underline;
+                }
+                strong {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
 
-// Main pages stylies:
+// ____________________Главная страница:
 #header {
     padding: 15px 0 0;
     position: relative;
@@ -438,6 +492,12 @@ img {
         }
         li {
             margin: 10px;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
             @include _991px() {
                 margin: 4px 20px 0 0;
                 &:first-child {
@@ -449,6 +509,9 @@ img {
             }
             a {
                 @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
+                &.active {
+                    text-decoration: underline;
+                }
                 span {
                     display: none;
                     @include _768px() {
@@ -1067,43 +1130,9 @@ footer {
     }
 }
 
-// Страница "Личный кабинет"
+// ____________________Страница "Личный кабинет":
 .lk_block {
     padding: 0 0 30px;
-    .links {
-        ul {
-            display: flex;
-            align-items: center;
-            li {
-                @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
-                a {
-                    @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
-                }
-            }
-        }
-        .lk_menus {
-            justify-content: center;
-            margin: 20px 0;
-            @include _768px() {
-                flex-wrap: wrap;
-            }
-            li {
-                margin: 0 10px;
-                @include _768px() {
-                    margin: 10px;
-                }
-                a {
-                    @include _desc('Montserrat', 400, 14px, 17px, #000);
-                    &.active {
-                        text-decoration: underline;
-                    }
-                    strong {
-                        font-weight: 600;
-                    }
-                }
-            }
-        }
-    }
     .diskaunt_graphic {
         h4 {
             @include _desc('Montserrat', 700, 18px, 22px, #393939);
@@ -1797,9 +1826,6 @@ footer {
                     justify-content: center;
                     align-items: center;
                 }
-                a {
-
-                }
                 .status_flex {
                     display: flex;
                     align-content: center;
@@ -1886,6 +1912,211 @@ footer {
                 a {
                     @include _desc('Source Sans Pro', 400, 14px, 18px, #2F80ED); 
                     text-decoration-color: #2F80ED;
+                }
+            }
+        }
+    }
+}
+
+//____________________ Страница "Волосы":
+.catalog {
+    padding: 20px 0;
+    .catalog_block {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        @include _890px() {
+            display: block;
+        }
+        .catalog_list {
+            max-width: 288px;
+            width: 100%;
+            background-color: #FAFAFA;
+            padding: 7px;
+            @include _890px() {
+                max-width: 100%
+            }
+            h3 {
+                @include _desc('Source Sans Pro', 600, 18px, 23px, #333);
+                margin: 3px 0;
+            }
+            .catalog_item {
+                border-top: 1px solid #BDBDBD;
+                padding: 10px 0;
+                .catalog_link {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    cursor: pointer;
+                    h5 {
+                        @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
+                    }
+                    .icon {
+                        min-width: 20px;
+                        min-height: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid #333333;
+                        border-radius: 50%;
+                        svg {
+                            transition: .3s all;
+                            &.active {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+                ul {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;            
+                    margin-left: 7px;
+                    li {
+                        a {
+                            @include _desc('Source Sans Pro', 400, 14px, 18px, #333);
+                        }
+                    }
+                }
+            }
+            .catalog_product {
+                @include _890px() {
+                    display: flex;
+                }
+                @include _576px() {
+                    justify-content: space-between;
+                }
+                .product {
+                    background: #F5F5F5;
+                    padding-top: 20px;
+                    text-align: center;
+                    margin-top: 20px;
+                    @include _890px() {
+                        max-width: 150px;
+                        width: 100%;
+                        margin-right: 20px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                    @include _576px() {
+                        max-width: 100%;
+                        flex: 0 0 48%;
+                        margin: 8px 0;
+                    }
+                    p {
+                        @include _desc('Montserrat', 600, 14px, 18px, #000);
+                        margin: 7px 0 10px;
+                        @include _890px() {
+                            font-size: 10px;
+                            line-height: 14px;
+                        }
+                    }
+                    .product_txt {
+                        @include _desc('Montserrat', 700, 12px, 15px, #fff);
+                        background: rgba(119, 138, 144, 0.7);
+                        min-height: 53px;
+                        text-transform: uppercase;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @include _890px() {
+                            font-size: 10px;
+                            line-height: 12px;
+                            min-height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+        .catalog_content {
+            max-width: 895px;
+            width: 100%;
+            margin-left: 20px;
+            padding-top: 30px;
+            @include _890px() {
+                margin-left: 0;
+            }
+            .catalog_main {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include _576px() {
+                    flex-direction: column;
+                }
+                .catalog_main_desc {
+                    max-width: 400px;
+                    @include _890px() {
+                        max-width: 310px;
+                    }
+                    @include _576px() {
+                        max-width: 100%;
+                        order: 1;
+                        margin-top: 12px;
+                    }
+                    h2 {
+                        @include _desc('Montserrat', 400, 26px, 34px, #000);
+                        margin-bottom: 20px;
+                        span {
+                            background: #005300;
+                            color: #fff;
+                            padding: 0 4px;
+                        }
+                        @include _576px() {
+                            font-size: 24px;
+                            line-height: 32px;
+                        }
+                    }
+                    .default_btn {
+                        max-width: 170px;
+                    }
+                }
+            }
+            .product_wrap {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                padding: 40px 0 20px;
+                .product_item {
+                    border: 1px solid #E0E0E0;
+                    padding: 7px;
+                    text-align: center;
+                    flex: 0 0 32%;
+                    margin: 10px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    @include _460px() {
+                        flex: 0 0 48%;
+                        margin: 8px 0;
+                    }
+                    a {
+                        @include _desc('Montserrat', 500, 16px, 20px, #333);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 40px;
+                        @include _576px() {
+                            font-size: 10px;
+                            line-height: 12px;
+                        }
+                    }
+                }
+            }
+            h3 {
+                @include _desc('Montserrat', 400, 24px, 29px, #393939);
+                margin: 30px 0 20px;
+                @include _576px() {
+                    font-size: 20px;
+                    line-height: 25px;
+                    margin: 20px 0 10px;
+                }
+            }
+            p {
+                @include _desc('Montserrat', 400, 16px, 26px, #333);
+                @include _576px() {
+                    font-size: 14px;
+                    line-height: 21px;
                 }
             }
         }
