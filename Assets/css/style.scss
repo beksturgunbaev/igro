@@ -1975,6 +1975,7 @@ footer {
                     li {
                         a {
                             @include _desc('Source Sans Pro', 400, 14px, 18px, #333);
+                            text-decoration-color: #333;
                         }
                     }
                 }
@@ -2072,11 +2073,32 @@ footer {
                     }
                 }
             }
+            ul {
+                li {
+                    list-style-type: disc;
+                    margin: 10px 0 0 20px;
+                }
+            }
+            .catalog_main_two {
+                background: #D7D7D7;
+                padding: 0 20px 0 30px;
+                @include _576px() {
+                    padding: 30px 20px;
+                }
+                .catalog_main_img {
+                    margin-bottom: -4px;
+                }
+            }
             .product_wrap {
                 display: flex;
+                flex-flow: row wrap;
                 justify-content: space-between;
                 flex-wrap: wrap;
                 padding: 40px 0 20px;
+                &::after {
+                    content: "";
+                    flex: 0 0 32%;
+                }
                 .product_item {
                     border: 1px solid #E0E0E0;
                     padding: 7px;
