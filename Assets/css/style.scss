@@ -1860,85 +1860,6 @@ footer {
     }
 }
 
-.fav_products {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    .fav_product {
-        width: 32%;
-        margin: 8px 0;
-        border: 1px solid #E0E0E0;
-        text-align: center;
-        padding: 14px;
-        &:hover {
-            .fav_img {
-                img {
-                    transform: scale(1.1);
-                }
-            }
-            a {
-                text-decoration: none;
-            }
-            h6 {
-                text-decoration: underline;
-            }
-        }
-        @include _890px() {
-            width: 48%;
-        }
-        @include _991px() {
-            padding: 14px 7px;
-        }
-        .fav_img {
-            height: 214px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            img {
-                transform: scale(1);
-                transition: .2s all;
-            }
-            @include _576px() {
-                height: 160px;
-                img {
-                    height: 100%;
-                    padding-bottom: 10px;
-                }
-            }
-        }
-        h6 {
-            @include _desc('Source Sans Pro', 400, 14px, 18px, #333333);
-            margin: 7px 0 20px;
-            @include _576px() {
-                font-size: 12px;
-                line-height: 16px;
-                margin: 5px 0 10px;
-            }
-        }
-        p {
-            @include _desc('Source Sans Pro', 400, 12px, 16px, #828282);
-        }
-        h5{
-            @include _desc('Source Sans Pro', 700, 14px, 18px, #000);
-            margin-bottom: 7px;
-        }
-        h4 {
-            @include _desc('Source Sans Pro', 700, 18px, 18px, #000);
-            span {
-                font-size: 12px;
-                line-height: 16px;
-                color: #828282;
-                margin-left: 4px;
-            }
-        }
-        span {
-            @include _desc('Source Sans Pro', 600, 16px, 20px, #1C5530);
-        }
-    }
-}
-
 //____________________ Страница "Волосы":
 .catalog {
     padding: 20px 0;
@@ -1956,6 +1877,23 @@ footer {
             padding: 7px;
             @include _890px() {
                 max-width: 100%
+            }
+            button {
+                width: 100%;
+                min-height: 36px;
+                margin-top: 40px;
+                cursor: pointer;
+                border: 1px solid #393939;
+                transition: .2s all;
+                background: transparent;
+                &:hover {
+                    background: #393939;
+                    color: #fff;
+                }
+                svg {
+                    margin-left: 4px;
+                }
+                @include _desc('Source Sans Pro', 400, 14px, 18px, #333333)
             }
             h3 {
                 @include _desc('Source Sans Pro', 600, 18px, 23px, #333);
@@ -2225,6 +2163,120 @@ footer {
                     font-size: 14px;
                     line-height: 21px;
                 }
+            }
+        }
+    }
+}
+.fav_products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    .fav_product {
+        width: 32%;
+        margin: 8px 0;
+        border: 1px solid #E0E0E0;
+        text-align: center;
+        padding: 14px;
+        &:hover {
+            .fav_img {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+            h6 {
+                text-decoration: underline;
+            }
+        }
+        @include _890px() {
+            width: 48%;
+        }
+        @include _991px() {
+            padding: 14px 7px;
+        }
+        .fav_img {
+            height: 214px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            img {
+                transform: scale(1);
+                transition: .2s all;
+            }
+            @include _576px() {
+                height: 160px;
+                img {
+                    height: 100%;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        h6 {
+            @include _desc('Source Sans Pro', 400, 14px, 18px, #333333);
+            margin: 7px 0 20px;
+            @include _576px() {
+                font-size: 12px;
+                line-height: 16px;
+                margin: 5px 0 10px;
+            }
+        }
+        p {
+            @include _desc('Source Sans Pro', 400, 12px, 16px, #828282);
+        }
+        h5{
+            @include _desc('Source Sans Pro', 700, 14px, 18px, #000);
+            margin-bottom: 7px;
+        }
+        h4 {
+            @include _desc('Source Sans Pro', 700, 18px, 18px, #000);
+            span {
+                font-size: 12px;
+                line-height: 16px;
+                color: #828282;
+                margin-left: 4px;
+            }
+        }
+        span {
+            @include _desc('Source Sans Pro', 600, 16px, 20px, #1C5530);
+        }
+    }
+}
+#pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin: 40px 0;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        li {
+            width: 38px;
+            min-height: 38px;
+            border: 1px solid #828282;
+            cursor: pointer;
+            list-style: none;
+            margin: 0 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .2s all;
+            @include _desc('Source Sans Pro', 400, 14px, 26px, #393939);
+            &.active {
+                background: #393939;
+                color: #fff;
+            }
+            &:first-child {
+                width: 90px;
+            }
+            &:last-child {
+                width: 90px;
+            }
+            svg {
+                margin: 0 5px;
             }
         }
     }
