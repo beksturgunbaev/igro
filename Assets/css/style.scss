@@ -1491,64 +1491,6 @@ footer {
                     text-decoration: underline;
                 }
             }
-            .fav_products {
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                width: 100%;
-                .fav_product {
-                    width: 32%;
-                    margin: 8px 0;
-                    border: 1px solid #E0E0E0;
-                    text-align: center;
-                    padding: 14px;
-                    @include _890px() {
-                        width: 48%;
-                    }
-                    @include _991px() {
-                        padding: 14px 7px;
-                    }
-                    .fav_img {
-                        height: 214px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        @include _576px() {
-                            height: 160px;
-                            img {
-                                height: 100%;
-                                padding-bottom: 10px;
-                            }
-                        }
-                    }
-                    h6 {
-                        @include _desc('Source Sans Pro', 400, 14px, 18px, #333333);
-                        margin: 7px 0 20px;
-                        @include _576px() {
-                            font-size: 12px;
-                            line-height: 16px;
-                            margin: 5px 0 10px;
-                        }
-                    }
-                    p {
-                        @include _desc('Source Sans Pro', 400, 12px, 16px, #828282);
-                    }
-                    h5{
-                        @include _desc('Source Sans Pro', 700, 14px, 18px, #000);
-                        margin-bottom: 7px;
-                    }
-                    h4 {
-                        @include _desc('Source Sans Pro', 700, 18px, 18px, #000);
-                        span {
-                            font-size: 12px;
-                            line-height: 16px;
-                            color: #828282;
-                            margin-left: 4px;
-                        }
-                    }
-
-                }
-            }
         }
     }
     .discounts {
@@ -1918,6 +1860,85 @@ footer {
     }
 }
 
+.fav_products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    .fav_product {
+        width: 32%;
+        margin: 8px 0;
+        border: 1px solid #E0E0E0;
+        text-align: center;
+        padding: 14px;
+        &:hover {
+            .fav_img {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+            a {
+                text-decoration: none;
+            }
+            h6 {
+                text-decoration: underline;
+            }
+        }
+        @include _890px() {
+            width: 48%;
+        }
+        @include _991px() {
+            padding: 14px 7px;
+        }
+        .fav_img {
+            height: 214px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            img {
+                transform: scale(1);
+                transition: .2s all;
+            }
+            @include _576px() {
+                height: 160px;
+                img {
+                    height: 100%;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+        h6 {
+            @include _desc('Source Sans Pro', 400, 14px, 18px, #333333);
+            margin: 7px 0 20px;
+            @include _576px() {
+                font-size: 12px;
+                line-height: 16px;
+                margin: 5px 0 10px;
+            }
+        }
+        p {
+            @include _desc('Source Sans Pro', 400, 12px, 16px, #828282);
+        }
+        h5{
+            @include _desc('Source Sans Pro', 700, 14px, 18px, #000);
+            margin-bottom: 7px;
+        }
+        h4 {
+            @include _desc('Source Sans Pro', 700, 18px, 18px, #000);
+            span {
+                font-size: 12px;
+                line-height: 16px;
+                color: #828282;
+                margin-left: 4px;
+            }
+        }
+        span {
+            @include _desc('Source Sans Pro', 600, 16px, 20px, #1C5530);
+        }
+    }
+}
+
 //____________________ Страница "Волосы":
 .catalog {
     padding: 20px 0;
@@ -1940,17 +1961,57 @@ footer {
                 @include _desc('Source Sans Pro', 600, 18px, 23px, #333);
                 margin: 3px 0;
             }
+            .filter_checkbox {
+                padding-bottom: 5px;
+                border-bottom: 1px solid #BDBDBD;
+                &:last-child {
+                    border-bottom: none;
+                }
+                input {
+                    width: 0;
+                    height: 0;
+                    visibility: hidden;
+                    opacity: 0;
+                    &:checked + label {
+                        &::before {
+                            color: #333;
+                        }
+                    }
+                }
+                label {
+                    @include _desc('Source Sans Pro', 400, 14px, 18px, #333);
+                    position: relative;
+                    padding-left: 20px;
+                    &::before {
+                        content: '✔';
+                        position: absolute;
+                        top: 0;
+                        left: -2px;
+                        width: 13px;
+                        height: 13px;
+                        color: #fff;
+                        border: 2px solid #333333;
+                        border-radius: 2px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                div {
+                    margin: 4px 0;
+                }
+            }
             .catalog_item {
                 border-top: 1px solid #BDBDBD;
                 padding: 10px 0;
+                h5 {
+                    @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
+                }
                 .catalog_link {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    cursor: pointer;
-                    h5 {
-                        @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
-                    }
+                    cursor: pointer;   
                     .icon {
                         min-width: 20px;
                         min-height: 20px;
@@ -1972,6 +2033,9 @@ footer {
                     overflow: hidden;
                     transition: max-height 0.2s ease-out;            
                     margin-left: 7px;
+                    &.active {
+                        max-height: inherit;
+                    }
                     li {
                         a {
                             @include _desc('Source Sans Pro', 400, 14px, 18px, #333);
@@ -2035,6 +2099,10 @@ footer {
             width: 100%;
             margin-left: 20px;
             padding-top: 30px;
+            h2 {
+                @include _desc('Montserrat', 400, 24px, 29px, #000);
+                margin-bottom: 20px;
+            }
             @include _890px() {
                 margin-left: 0;
             }
