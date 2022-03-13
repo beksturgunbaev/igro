@@ -213,6 +213,7 @@ img {
     ul {
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         li {
             @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
             a {
@@ -1411,6 +1412,7 @@ footer {
                                     position: absolute;
                                     opacity: 0;
                                     z-index: -1;
+                                    visibility: hidden;
                                 }
                                 input:checked + label {
                                     background: #1C5530;
@@ -1910,6 +1912,7 @@ footer {
                     height: 0;
                     visibility: hidden;
                     opacity: 0;
+                    z-index: -1;
                     &:checked + label {
                         &::before {
                             color: #333;

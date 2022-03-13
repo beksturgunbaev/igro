@@ -233,6 +233,8 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .links ul li {
@@ -2335,6 +2337,7 @@ footer .footer_wrap .footer_last_txt a {
   position: absolute;
   opacity: 0;
   z-index: -1;
+  visibility: hidden;
 }
 
 .lk_block .profile form .profile_wrap .profile_item .position .position_item .position_select input:checked + label {
@@ -3257,6 +3260,7 @@ footer .footer_wrap .footer_last_txt a {
   height: 0;
   visibility: hidden;
   opacity: 0;
+  z-index: -1;
 }
 
 .catalog .catalog_block .catalog_list .filter_checkbox input:checked + label::before {
