@@ -2267,6 +2267,10 @@ footer {
             justify-content: center;
             align-items: center;
             transition: .2s all;
+            @include _460px() {
+                width: 30px;
+                height: 30px;
+            }
             @include _desc('Source Sans Pro', 400, 14px, 26px, #393939);
             &.active {
                 background: #393939;
@@ -2274,12 +2278,21 @@ footer {
             }
             &:first-child {
                 width: 90px;
+                @include _460px() {
+                    width: 80px;
+                }
             }
             &:last-child {
                 width: 90px;
+                @include _460px() {
+                    width: 80px;
+                }
             }
             svg {
                 margin: 0 5px;
+                @include _460px() {
+                    margin: 4px 5px 0;
+                }
             }
         }
     }

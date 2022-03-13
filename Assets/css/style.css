@@ -3870,6 +3870,13 @@ footer .footer_wrap .footer_last_txt a {
   color: #393939;
 }
 
+@media (max-width: 460px) {
+  #pagination ul li {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 #pagination ul li.active {
   background: #393939;
   color: #fff;
@@ -3879,11 +3886,29 @@ footer .footer_wrap .footer_last_txt a {
   width: 90px;
 }
 
+@media (max-width: 460px) {
+  #pagination ul li:first-child {
+    width: 80px;
+  }
+}
+
 #pagination ul li:last-child {
   width: 90px;
 }
 
+@media (max-width: 460px) {
+  #pagination ul li:last-child {
+    width: 80px;
+  }
+}
+
 #pagination ul li svg {
   margin: 0 5px;
+}
+
+@media (max-width: 460px) {
+  #pagination ul li svg {
+    margin: 4px 5px 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
