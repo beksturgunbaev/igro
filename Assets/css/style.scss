@@ -1907,37 +1907,36 @@ footer {
                 &:last-child {
                     border-bottom: none;
                 }
-                .checkbox_div {
-                    input {
-                        position: absolute;
-                        z-index: -1;
-                        opacity: 0;
-                        &:checked + label {
-                            &::before {
-                                color: #333;
-                            }
+                input {
+                    // position: absolute;
+                    // z-index: -1;
+                    // opacity: 0;
+                    &:checked + label {
+                        &::before {
+                            color: #333;
                         }
-                        &+label {
-                            @include _desc('Source Sans Pro', 400, 14px, 18px, #333);
-                            position: relative;
-                            padding-left: 20px;
-                            &::before {
-                                content: '✔';
-                                position: absolute;
-                                top: 0;
-                                left: -2px;
-                                width: 13px;
-                                height: 13px;
-                                color: #fff;
-                                border: 2px solid #333333;
-                                border-radius: 2px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                            }
+                    }
+                    &+label {
+                        @include _desc('Source Sans Pro', 400, 14px, 18px, #333);
+                        position: relative;
+                        // padding-left: 20px;
+                        &::before {
+                            // content: '✔';
+                            position: absolute;
+                            top: 0;
+                            left: -2px;
+                            width: 13px;
+                            height: 13px;
+                            color: #fff;
+                            border: 2px solid #333333;
+                            border-radius: 2px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
                         }
                     }
                 }
+            
                 
                 div {
                     margin: 4px 0;
