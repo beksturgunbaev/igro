@@ -3256,18 +3256,16 @@ footer .footer_wrap .footer_last_txt a {
 }
 
 .catalog .catalog_block .catalog_list .filter_checkbox .checkbox_div input {
-  width: 0;
-  height: 0;
-  visibility: hidden;
-  opacity: 0;
+  position: absolute;
   z-index: -1;
+  opacity: 0;
 }
 
 .catalog .catalog_block .catalog_list .filter_checkbox .checkbox_div input:checked + label::before {
   color: #333;
 }
 
-.catalog .catalog_block .catalog_list .filter_checkbox .checkbox_div label {
+.catalog .catalog_block .catalog_list .filter_checkbox .checkbox_div input + label {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 14px;
@@ -3277,7 +3275,7 @@ footer .footer_wrap .footer_last_txt a {
   padding-left: 20px;
 }
 
-.catalog .catalog_block .catalog_list .filter_checkbox .checkbox_div label::before {
+.catalog .catalog_block .catalog_list .filter_checkbox .checkbox_div input + label::before {
   content: '✔';
   position: absolute;
   top: 0;
