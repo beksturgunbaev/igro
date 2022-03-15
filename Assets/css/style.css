@@ -3858,8 +3858,18 @@ footer .footer_wrap .footer_last_txt a {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 20px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+  .catalog .card_links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .catalog .card_links li {
@@ -3868,6 +3878,12 @@ footer .footer_wrap .footer_last_txt a {
 
 .catalog .card_links li:last-child {
   margin-right: 0;
+}
+
+@media (max-width: 576px) {
+  .catalog .card_links li {
+    margin: 0;
+  }
 }
 
 .catalog .card_links li a {
