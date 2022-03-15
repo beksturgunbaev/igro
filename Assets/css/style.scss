@@ -204,6 +204,7 @@ img {
         p {
             @include _desc('Montserrat', 400, 14px, 21px, #333);
             padding-top: 30px;
+            max-width: 170px;
         }
     }
 }
