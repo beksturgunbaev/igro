@@ -219,6 +219,9 @@ img {
             a {
                 @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
             }
+            span {
+                color: #828282;
+            }
         }
     }
     .lk_menus {
@@ -2169,6 +2172,187 @@ footer {
             }
         }
     }
+    .card_wrapper {
+        display: flex;
+        width: 100%;
+        padding: 40px 0;
+        .card_img {
+            max-width: 380px;
+            width: 100%;
+            @include _991px() {
+                max-width: 240px;
+            }
+        }
+        .card_info {
+            max-width: 590px;
+            width: 100%;
+            padding-left: 10px;
+            .add_favourite {
+                @include _desc('Source Sans Pro', 400, 14px, 18px, #393939);
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                svg {
+                    margin-right: 7px;
+                }
+            }
+            h4 {
+                @include _desc('Montserrat', 500, 18px, 28px, #393939);
+                margin: 12px 0 25px;
+                @include _991px() {
+                    font-size: 16px;
+                    line-height: 21px;
+                    margin: 10px 0;
+                }
+            }
+            .card_info_wrap {
+                display: flex;
+                justify-content: space-between;
+                .card_info_wrap_left {
+                    max-width: 256px;
+                    width: 100%;
+                    margin-right: 20px;
+                    .card_info_wrap_left_item {
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 10px 0;
+                        h6 {
+                            @include _desc('Source Sans Pro', 400, 14px, 18px, #333);
+                        }
+                    }
+                }
+                .card_info_wrap_right {
+                    max-width: 390px;
+                    width: 100%;
+                    background: #f2f2f2;
+                    padding: 20px;
+                    @include _desc('Source Sans Pro', 400, 14px, 23px, #4F4F4F);
+                    a {
+                        font-weight: 700;
+                        text-decoration: underline;
+                        color: #000;
+                    }
+
+                }
+            }
+        }
+    }
+    .card_links {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        li {
+            margin-right: 30px;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                @include _desc('Source Sans Pro', 400, 16px, 20px, #828282);
+                &.active {
+                    color: #000;
+                }
+            }
+        }
+    }
+    .card_table {
+        width: 100%;
+        border: 1px solid #E0E0E0;
+        padding-top: 5px;
+        border-collapse: collapse;
+        table {
+            border-bottom: 1px solid #E0E0E0;
+            thead {
+                height: 38px;
+                background: #f2f2f2;
+                tr {
+                    th {
+                        @include _desc('Source Sans Pro', 400, 18px, 23px, #393939);
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td {
+                        @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
+                        width: 20%;
+                        text-align: center;
+                        padding: 4px;
+                        border-top: 1px solid #E0E0E0;
+                        a {
+                            color: #000;
+                            text-decoration: underline;
+                        }
+                        &:first-child {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            text-align: left;
+                        }
+                        .card_table_desc {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            img {
+                                margin-right: 20px;
+                            }
+                            span {
+                                max-width: 160px;
+                            }
+                        }
+                    }
+                    .price_green_txt {
+                        color: #1C5530;
+                        padding: 0 14px;
+                    }
+                }
+            }
+        }
+        #pagination {
+            margin: 10px 0;
+            padding: 0 10px;
+        }
+        .table_txt {
+            max-width: 710px;
+            padding: 14px 20px;
+            h3 {
+                @include _desc('Montserrat', 700, 20px, 24px, #393939);
+                margin: 10px 0;
+            }
+            ul {
+                li {
+                    @include _desc('Source Sans Pro', 400, 16px, 28px, #4F4F4F);
+                }
+            }
+            p {
+                @include _desc('Source Sans Pro', 400, 16px, 28px, #4F4F4F);
+            }
+            h5 {
+                @include _desc('Source Sans Pro', 400, 18px, 23px, #4F4F4F);
+                margin: 30px 0 10px;
+                a {
+                    font-weight: 600;
+                    color: #000;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .card_rec_products {
+        padding-bottom: 30px;
+        .card_rec_products_title {
+            @include _desc('MOntserrat', 500, 18px, 28px, #393939);
+            height: 40px;
+            background: #F2F2F2;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            margin: 50px 0 20px;
+        }
+        .fav_products {
+            width: 75%;
+        }
+    }
 }
 .fav_products {
     display: flex;
@@ -2276,23 +2460,17 @@ footer {
                 background: #393939;
                 color: #fff;
             }
-            &:first-child {
-                width: 90px;
-                @include _460px() {
-                    width: 80px;
-                }
-            }
-            &:last-child {
-                width: 90px;
-                @include _460px() {
-                    width: 80px;
-                }
-            }
             svg {
                 margin: 0 5px;
                 @include _460px() {
                     margin: 4px 5px 0;
                 }
+            }
+        }
+        .big_pag_btn {
+            width: 90px;
+            @include _460px() {
+                width: 80px;
             }
         }
     }
