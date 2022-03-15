@@ -140,22 +140,18 @@ img {
 }
 
 .modal .mobile_menu {
-  width: 96%;
+  position: absolute;
+  right: -100%;
+  width: 80%;
+  height: 100%;
   padding: 20px;
   background: #fff;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  opacity: 0;
-  visibility: hidden;
   -webkit-transition: .3s all;
   transition: .3s all;
 }
 
 .modal .mobile_menu.active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-  visibility: visible;
+  right: 0;
 }
 
 .modal .mobile_menu .mobile_header {
@@ -184,7 +180,8 @@ img {
 }
 
 .modal .mobile_menu ul {
-  padding-top: 20px;
+  padding-top: 90px;
+  text-align: right;
 }
 
 .modal .mobile_menu ul li {
@@ -206,6 +203,7 @@ img {
 
 .modal .mobile_menu .mobile_contacts {
   padding-top: 20px;
+  text-align: right;
 }
 
 .modal .mobile_menu .mobile_contacts div a {
@@ -223,6 +221,7 @@ img {
   line-height: 21px;
   color: #333;
   padding-top: 30px;
+  text-align: right;
 }
 
 .links ul {

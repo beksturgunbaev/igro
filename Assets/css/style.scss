@@ -155,17 +155,15 @@ img {
         visibility: visible;
     }
     .mobile_menu {
-        width: 96%;
+        position: absolute;
+        right: -100%;
+        width: 80%;
+        height: 100%;
         padding: 20px;
         background: #fff;
-        transform: scale(1.2);
-        opacity: 0;
-        visibility: hidden;
         transition: .3s all;
         &.active {
-            transform: scale(1);
-            opacity: 1;
-            visibility: visible;
+            right: 0;
         }
         .mobile_header {
             display: flex;
@@ -184,7 +182,8 @@ img {
             }
         }
         ul {
-            padding-top: 20px;
+            padding-top: 90px;
+            text-align: right;
             li {
                 margin: 10px 0;
                 display: flex;
@@ -197,6 +196,7 @@ img {
         }
         .mobile_contacts {
             padding-top: 20px;
+            text-align: right;
             div {
                 a {
                     @include _desc('Montserrat', 600, 18px, 27px, #333);
@@ -206,6 +206,7 @@ img {
         p {
             @include _desc('Montserrat', 400, 14px, 21px, #333);
             padding-top: 30px;
+            text-align: right;
         }
     }
 }
