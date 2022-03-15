@@ -2176,17 +2176,27 @@ footer {
         display: flex;
         width: 100%;
         padding: 40px 0;
+        @include _768px() {
+            flex-direction: column;
+        }
         .card_img {
             max-width: 380px;
             width: 100%;
             @include _991px() {
                 max-width: 240px;
             }
+            @include _576px() {
+                max-width: 80%;
+                margin: 0 auto 20px;
+            }
         }
         .card_info {
             max-width: 590px;
             width: 100%;
             padding-left: 10px;
+            @include _576px() {
+                padding-left: 0;
+            }
             .add_favourite {
                 @include _desc('Source Sans Pro', 400, 14px, 18px, #393939);
                 display: flex;
@@ -2208,10 +2218,16 @@ footer {
             .card_info_wrap {
                 display: flex;
                 justify-content: space-between;
+                @include _576px() {
+                    flex-direction: column;
+                }
                 .card_info_wrap_left {
                     max-width: 256px;
                     width: 100%;
                     margin-right: 20px;
+                    @include _576px() {
+                        max-width: 100%;
+                    }
                     .card_info_wrap_left_item {
                         display: flex;
                         justify-content: space-between;
@@ -2226,6 +2242,10 @@ footer {
                     width: 100%;
                     background: #f2f2f2;
                     padding: 20px;
+                    @include _576px() {
+                        max-width: 100%;
+                        padding: 10px;
+                    }
                     @include _desc('Source Sans Pro', 400, 14px, 23px, #4F4F4F);
                     a {
                         font-weight: 700;
@@ -2241,6 +2261,7 @@ footer {
         display: flex;
         align-items: center;
         margin-bottom: 20px;
+        flex-wrap: wrap;
         li {
             margin-right: 30px;
             &:last-child {
@@ -2259,11 +2280,21 @@ footer {
         border: 1px solid #E0E0E0;
         padding-top: 5px;
         border-collapse: collapse;
+        @include _576px() {
+            padding-top: 0;
+            border-top: none;
+        }
         table {
             border-bottom: 1px solid #E0E0E0;
+            @include _576px() {
+                width: 100%;
+            }
             thead {
                 height: 38px;
                 background: #f2f2f2;
+                @include _576px() {
+                    display: none;
+                }
                 tr {
                     th {
                         @include _desc('Source Sans Pro', 400, 18px, 23px, #393939);
@@ -2272,15 +2303,53 @@ footer {
             }
             tbody {
                 tr {
+                    @include _576px() {
+                        display: flex;
+                        flex-direction: column;
+                        border-top: 1px solid #E0E0E0;
+                        &:first-child {
+                            display: none;
+                        }
+                    }
                     td {
                         @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
                         width: 20%;
                         text-align: center;
                         padding: 4px;
                         border-top: 1px solid #E0E0E0;
+                        @include _576px() {
+                            border: none;
+                        }
+                        @include _991px() {
+                            width: 16%;
+                            line-height: 17px;
+                        }
+                        @include _768px() {
+                            font-size: 12px;
+                            line-height: 13px;
+                        }
+                        @include _576px() {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 7px;
+                            &::before {
+                                content: attr(data-label);
+                                width: 150px;
+                                text-align: left;
+                                @include _desc('Source Sans Pro', 400, 16px, 18px, #333333);
+                            }
+                        }
                         a {
                             color: #000;
                             text-decoration: underline;
+                            @include _768px() {
+                                text-align: center;
+                            }
+                            @include _576px() {
+                                text-align: right;
+                            }
                         }
                         &:first-child {
                             width: 100%;
@@ -2295,15 +2364,27 @@ footer {
                             align-items: center;
                             img {
                                 margin-right: 20px;
+                                @include _576px() {
+                                    margin-right: 5px;
+                                }
                             }
                             span {
                                 max-width: 160px;
+                                @include _768px() {
+                                    margin-right: 10px;
+                                }
                             }
                         }
                     }
                     .price_green_txt {
                         color: #1C5530;
                         padding: 0 14px;
+                        @include _991px() {
+                            padding: 0;
+                        }
+                        @include _576px() {
+                            padding: 7px;
+                        }
                     }
                 }
             }
@@ -2351,6 +2432,9 @@ footer {
         }
         .fav_products {
             width: 75%;
+            @include _768px() {
+                width: 100%;
+            }
         }
     }
 }
