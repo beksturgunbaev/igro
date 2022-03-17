@@ -571,12 +571,7 @@ img {
 
 .menus_icon .header_menu .icons .icons_item {
   margin-left: 20px;
-}
-
-@media (max-width: 768px) {
-  .menus_icon .header_menu .icons .icons_item select {
-    display: none;
-  }
+  position: relative;
 }
 
 .menus_icon .header_menu .icons .icons_item p {
@@ -591,6 +586,62 @@ img {
   .menus_icon .header_menu .icons .icons_item p {
     display: none;
   }
+}
+
+.menus_icon .header_menu .icons .icons_item .dropp_down {
+  cursor: pointer;
+}
+
+.menus_icon .header_menu .icons .icons_item .dropp_down p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menus_icon .header_menu .icons .icons_item .dropp_down p svg {
+  margin: 3px 0 0 3px;
+}
+
+.menus_icon .header_menu .icons .icons_item ul {
+  position: absolute;
+  top: 120%;
+  left: -50%;
+  background: #fff;
+  z-index: 999;
+  padding: 10px;
+  width: 160px;
+  text-align: left;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(0, 20px);
+          transform: translate(0, 20px);
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.menus_icon .header_menu .icons .icons_item ul.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.menus_icon .header_menu .icons .icons_item ul li a {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 5px 0;
 }
 
 .menus_icon .header_menu .icons .register {

@@ -78,3 +78,12 @@ for (let i = 0; i < acc.length; i++) {
         }
     });
 }
+
+// Dropdown
+let dropdown = document.querySelectorAll('.dropp_down');
+
+for(let i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener('click', function() {
+        this.nextElementSibling.classList.toggle('active');
+    });
+}
