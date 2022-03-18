@@ -87,3 +87,14 @@ for(let i = 0; i < dropdown.length; i++) {
         this.nextElementSibling.classList.toggle('active');
     });
 }
+
+let city = document.querySelector('.cities_select span div');
+let cityUl = document.querySelector('.cities_option');
+let cityOption = document.querySelectorAll('.cities_option li');
+
+for(let i = 0; i < cityOption.length; i++) {
+    cityOption[i].addEventListener('click', function() {
+        city.innerText = this.innerText;
+        cityUl.classList.remove('active');
+    });
+}
