@@ -85,10 +85,10 @@ img {
     }
 }
 .default_btn {
-    background: #333;
-    a {
+    a, button {
         font-family: 'Source Sans Pro';
         font-weight: 400;
+        padding: 0 40px;
         font-size: 14px;
         line-height: 18px;
         width: 100%;
@@ -98,6 +98,10 @@ img {
         justify-content: center;
         align-items: center;
         transition: .3s all;
+        background: #333;
+        border: none;
+        cursor: pointer;
+        width: fit-content;
         &:hover {
             opacity: .9;
             text-decoration: none;
@@ -323,6 +327,9 @@ img {
                     margin-left: 30px;
                     a {
                         @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
+                        &.active {
+                            text-decoration: underline;
+                        }
                     }
                 }
             }
@@ -466,18 +473,23 @@ img {
             width: 100%;
             margin-left: 0 !important;
             cursor: pointer;
-            padding: 5px 0;
             transition: .3s all;
-            padding: 7px 10px;
             &:hover {
                 background: #e7e6e6;
             }
             a {
                 color: #000;
+                width: 100%;
+                padding: 8px 12px;
                 &:hover {
                     text-decoration: none;
                 }
             }
+        }
+    }
+    .cities_option {
+        li {
+            padding: 7px 12px;
         }
     }
 }
@@ -910,8 +922,13 @@ img {
         margin-top: 40px;
     }
 }
-#info {
+#info,
+.info_desc,
+.aboutText {
     padding: 40px 0;
+    @include _576px() {
+        padding: 0 0 20px;
+    }
     .info_wrap {
         display: flex;
         justify-content: space-between;
@@ -952,6 +969,93 @@ img {
                 @include _890px() {
                     font-size: 14px;
                     line-height: 21px;
+                }
+            }
+        }
+    }
+}
+.aboutText {
+    padding: 0 !important;
+    .info_desc {
+        p {
+            font-size: 14px !important;
+            line-height: 26px !important;
+        }
+    }
+}
+.we_teached {
+    padding: 30px 0 40px;
+    .teached_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-top: 40px;
+        .teached_item {
+            width: 25%;
+            text-align: center;
+            padding: 40px 10px;
+            &:nth-child(2n+1) {
+                background: #F2F2F2;
+            }
+            @include _768px() {
+                width: 50%;
+                &:nth-child(2n+1) {
+                    background: #fff;
+                }
+                &:nth-child(4),
+                &:first-child {
+                    background: #F2F2F2;
+                }
+            }
+            span {
+                @include _desc('Montserrat', 400, 14px, 26px, #393939);
+                @include _1200px() {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+            }
+            h1 {
+                @include _desc('Montserrat', 700, 48px, 59px, #4F4F4F);
+                margin: 4px 0;
+                @include _1200px() {
+                    font-size: 30px;
+                    line-height: 38px;
+                }
+            }
+            h4 {
+                @include _desc('Montserrat', 700, 22px, 27px, #393939);
+                text-transform: uppercase;
+                @include _1200px() {
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+}
+.first_screen {
+    .wrapper {
+        display: flex;
+        align-items: center;
+        background: #D7D7D7;
+        min-height: 265px;
+        @include _768px() {
+            flex-direction: column;
+            justify-content: center;
+        }
+        .wrapper_left {
+            max-width: 412px;
+            padding-left: 40px;
+            @include _768px() {
+                padding-left: 14px;
+            }
+            h2 {
+                @include _desc('Montserrat', 400, 26px, 34px, #000);
+                margin-bottom: 14px;
+                span {
+                    background: #005300;
+                    color: #fff;
+                    padding: 0 4px;
                 }
             }
         }
@@ -1918,10 +2022,316 @@ footer {
         }
     }
 }
-
+.ourProducts {
+    .ourProducts_wrapper {
+        padding: 40px 0;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .ourProducts_item {
+            width: 25%;
+            &:nth-child(4) {
+                background: rgba(47, 128, 237, 0.12);
+            }
+            &:nth-child(5) {
+                background: rgba(32, 172, 122, 0.08);
+            }
+            @include _1024px() {
+                width: 33.3333%;
+            }
+            @include _768px() {
+                width: 50%;
+            }
+            @include _576px() {
+                width: 40%;
+                margin: 10px 0;
+            }
+        }
+        .ourProducts_desc {
+            padding: 14px;
+            @include _576px(){
+                padding: 7px;
+                width: 60%;
+            }
+            h5 {
+                @include _desc('Source Sans Pro', 700, 14px, 14px, #000);
+            }
+            h4 {
+                @include _desc('Montserrat', 400, 14px, 26px, #000);
+                text-transform: uppercase;
+                margin: 30px 0 60px;
+                @include _576px() {
+                    margin: 7px 0;
+                    line-height: 18px;
+                }
+            }
+            p {
+                @include _desc('Source Sans Pro', 400, 14px, 26px, #393939);
+                @include _576px() {
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+}
 //____________________ Страница "Волосы":
 .catalog {
     padding: 20px 0;
+    .login {
+        .login_wrapper {
+            display: flex;
+            justify-content: space-between;
+            @include _1200px() {
+                display: block;
+            }
+            .login_line {
+                width: 1px;
+                background: #BDBDBD;
+                margin: 0 12px;
+                @include _1200px() {
+                    display: none;
+                }
+            }
+        }
+        h3 {
+            margin: 30px 0 50px;
+            width: 100%;
+            background: #f2f2f2;
+            text-align: center;
+            @include _desc('Montserrat', 500, 18px, 28px, #393939);
+            padding: 6px 0;
+        }
+        h2 {
+            @include _desc('Montserrat', 500, 24px, 28px, #393939);
+        }
+        .login_item {
+            max-width: 490px;
+            width: 100%;
+            padding: 20px 0;
+            @include _1200px() {
+                margin: 0 auto;
+            }
+            p {
+                @include _desc('Source Sans Pro', 400, 18px, 23px, #333);
+                margin: 5px 0 15px;
+                @include _576px() {
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+            }
+            ul {
+                margin-bottom: 40px;
+                li {
+                    @include _desc('Source Sans Pro', 400, 18px, 36px, #4f4f4f);
+                    @include _576px() {
+                        font-size: 14px;
+                        line-height: 30px;
+                    }
+                }
+            }
+            .login_input {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 16px 0;
+                span {
+                    @include _desc('Source Sans Pro', 400, 14px, 18px, #4f4f4f);
+                }
+                input {
+                    border: 1px solid #BDBDBD;
+                    max-width: 288px;
+                    width: 100%;
+                    @include _desc('Source Sans Pro', 400, 16px, 21px, #333);
+                    padding: 8.5px 7px;
+                    margin-left: 7px;
+                }
+                .hidden_input {
+                    display: none;
+                }
+                .choose_file {
+                    font-family: 'Source Sans Pro';
+                    font-weight: 400;
+                    padding: 0 20px;
+                    font-size: 14px;
+                    line-height: 18px;
+                    width: 100%;
+                    height: 40px;
+                    color: #fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: .3s all;
+                    background: #333;
+                    border: none;
+                    cursor: pointer;
+                    width: fit-content;
+                }
+                .mini_inputs {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    max-width: 288px;
+                    width: 100%;
+                    input {
+                        margin-left: 0;
+                        max-width: 85px;
+                    }
+                    span {
+                        margin-left: 7px;
+                    }
+                }
+            }
+            #fileList {
+                p {
+                    font-size: 14px;
+                    margin-right: 10px;
+                    opacity: .7;
+                    text-align: right;
+                }
+            }
+            .default_btn {
+                display: flex;
+                justify-content: flex-end;
+                a, button {
+                    @include _576px() {
+                        width: 100%;
+                    }
+                }
+            }
+            .resume_pass {
+                text-align: right;
+                margin: 20px 0;
+                @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
+                a {
+                    @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
+                    text-decoration: underline;
+                }
+            }
+            button {
+                &:disabled,
+                &[disabled] {
+                    background: #C4C4C4;
+                    cursor: default;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .register {
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .login_item {
+            max-width: 790px;
+            width: 100%;
+            margin: 0 auto;
+            border: 1px solid #E0E0E0;
+            @include _576px() {
+                border: none;
+            }
+            form {
+                max-width: 390px;
+                margin: 0 auto;
+                padding: 30px 0;
+                .default_btn {
+                    justify-content: flex-start;
+                }
+            }
+            .resume_pass {
+                text-align: center;
+                margin: 0 auto 30px;
+            }
+            h4 {
+                @include _desc('Montserrat', 400, 18px, 22px, #393939);
+                padding-top: 12px;
+            }
+            .radio_button {
+                display: flex;
+                align-items: center;
+                div {
+                    display: flex;
+                    align-items: center;
+                    margin-right: 20px;
+                    input {
+                        max-width: inherit;
+                        width: auto;
+                        margin: 0;
+                        position: relative;
+                        opacity: 0;
+                        visibility: hidden;
+                        z-index: -1;
+                        &:checked + label {
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                top: 6px;
+                                left: -16px;
+                                border: 1px solid #393939;
+                                width: 6px;
+                                height: 6px;
+                                border-radius: 50%;
+                                background: #393939;
+                            }
+                        }
+                    }
+                    label {
+                        @include _desc('Source Sans Pro', 400, 16px, 20px, #333);
+                        position: relative;
+                        margin-left: 7px;
+                        cursor: pointer;
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 4px;
+                            left: -18px;
+                            border: 1px solid #393939;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+            .checkMark {
+                justify-content: flex-start;
+                margin: 24px 0;
+                input {
+                    position: absolute;
+                    max-width: inherit;
+                    width: auto;
+                    margin: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    z-index: -1;
+                    &:checked + label {
+                        svg {
+                            display: block;
+                        }
+                    }
+                }
+                label {
+                    display: flex;
+                    align-items: center;
+                    @include _desc('Source Sans Pro', 400, 12px, 15px, #5A5A5A);
+                    span {
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid #E0E0E0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 7px;
+                        svg {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .catalog_block {
         display: flex;
         justify-content: space-between;
@@ -2306,7 +2716,47 @@ footer {
                         text-decoration: underline;
                         color: #000;
                     }
-
+                    h1 {
+                        @include _desc('Montserrat', 700, 36px, 44px, #333);
+                        margin: 5px 0;
+                    }
+                    .counter {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 10px;
+                        span {
+                            @include _desc('Montserrat', 300, 25px, 25px, #333);
+                            padding: 5px;
+                            border: 1px solid #E0E0E0;
+                            &:nth-child(2) {
+                                font-weight: 700;
+                            }
+                            &:first-child {
+                                cursor: pointer;
+                            }
+                            &:nth-child(3) {
+                                cursor: pointer;
+                            }
+                        }
+                        button {
+                            width: 135px;
+                            height: 40px;
+                            font-family: 'Source Sans Pro';
+                            color: #fff;
+                            font-size: 16px;
+                            background: #333;
+                            border: none;
+                            margin-left: 9px;
+                            cursor: pointer;
+                            transition: .2s all;
+                            &:hover {
+                                opacity: .8;
+                            }
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -98,3 +98,14 @@ for(let i = 0; i < cityOption.length; i++) {
         cityUl.classList.remove('active');
     });
 }
+
+//  Choose file:
+
+updateList = function() {
+  let input = document.getElementById('file');
+  let output = document.getElementById('fileList');
+
+  for (var i = 0; i < input.files.length; ++i) {
+    output.innerHTML += '<p>' + input.files.item(i).name + '</p>';
+  }
+}
