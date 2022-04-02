@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,900&family=Source+Sans+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,900&family=Source+Sans+Pro:wght@300;400;600;700&display=swap");
 body {
   margin: 0;
   font-family: 'Montserrat';
@@ -1736,7 +1736,14 @@ img {
 
 @media (max-width: 768px) {
   #access .access_wrap .access_img {
-    display: none;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  #access .access_wrap .access_img {
+    max-width: 260px;
+    margin: 0 auto;
   }
 }
 
@@ -5611,6 +5618,127 @@ footer .footer_wrap .footer_last_txt a {
   background: transparent;
   border: 1px solid #393939;
   color: #393939;
+}
+
+#club .catalog_content {
+  max-width: 100%;
+  padding: 0;
+}
+
+#club .catalog_main {
+  background: #f0efef;
+}
+
+#club .catalog_main_desc {
+  margin-left: 40px;
+}
+
+@media (max-width: 576px) {
+  #club .catalog_main_desc {
+    margin: 10px 0 30px 20px;
+  }
+  #club .catalog_main_desc h2 {
+    font-size: 22px;
+  }
+}
+
+#club .club_decc {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#club .club_decc h3 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  color: #393939;
+}
+
+#club .club_decc h6 {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000;
+  margin: 12px 0 20px;
+}
+
+#club .club_decc p {
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#club .club_decc h5 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  color: #393939;
+}
+
+#club .club_decc h4 {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+  color: #393939;
+}
+
+#club .club_decc .club_system {
+  padding: 20px;
+  background: #F2F2F2;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+#club .club_decc .club_system .club_system_item {
+  max-width: 130px;
+  width: 100%;
+  margin: 24px 0;
+}
+
+#club .club_decc .club_system .club_system_item h4 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #393939;
+  width: 100%;
+}
+
+#club .club_decc .club_system .club_system_item .line {
+  width: 100%;
+  height: 1px;
+  background: #E0E0E0;
+  margin: 10px 0;
+  position: relative;
+}
+
+#club .club_decc .club_system .club_system_item .line::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #219653;
 }
 
 .switch_parent {
