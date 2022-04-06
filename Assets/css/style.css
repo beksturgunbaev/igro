@@ -1333,14 +1333,22 @@ img {
   padding: 10px;
 }
 
-#brands_page h2 {
+#brands_page h2,
+#brands_page h3 {
   font-family: "MOntserrat";
   font-weight: 700;
   font-size: 28px;
   line-height: 34px;
   color: #393939;
-  margin: 20px 0 40px;
+  margin: 20px 0 30px;
   text-align: center;
+}
+
+#brands_page h3 {
+  font-size: 24px;
+  line-height: 29px;
+  text-align: left;
+  margin: 0 0 10px;
 }
 
 #brands_page .brands_wrap {
@@ -1405,6 +1413,7 @@ img {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 48.5%;
             flex: 0 0 48.5%;
+    min-height: 214px;
   }
 }
 
@@ -1443,12 +1452,75 @@ img {
   color: #000;
 }
 
+@media (max-width: 460px) {
+  #brands_page .brands_wrap .brands_item .brands_item_footer p {
+    font-size: 12px;
+  }
+}
+
 #brands_page .brands_wrap .brands_item .brands_item_footer a {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #2F80ED;
+  -webkit-text-decoration-color: #2F80ED;
+          text-decoration-color: #2F80ED;
+}
+
+@media (max-width: 460px) {
+  #brands_page .brands_wrap .brands_item .brands_item_footer a {
+    font-size: 12px;
+  }
+}
+
+#brands_page .brands_partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 991px) {
+  #brands_page .brands_partners {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+#brands_page .brands_partners ul {
+  width: 15%;
+}
+
+@media (max-width: 991px) {
+  #brands_page .brands_partners ul {
+    width: 20%;
+    margin-top: 14px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  #brands_page .brands_partners ul {
+    width: 30%;
+  }
+}
+
+#brands_page .brands_partners ul li a {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #393939;
+  -webkit-text-decoration-color: #393939;
+          text-decoration-color: #393939;
 }
 
 #proffessionals {
@@ -4454,6 +4526,15 @@ footer .footer_wrap .footer_last_txt a {
     font-size: 14px;
     line-height: 21px;
   }
+}
+
+.catalog .payment_terms h5 {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #333;
+  margin: 12px 0 30px;
 }
 
 .catalog .card_wrapper {

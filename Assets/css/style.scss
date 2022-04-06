@@ -873,10 +873,17 @@ img {
     }
 }
 #brands_page {
-    h2 {
+    h2, 
+    h3 {
         @include _desc('MOntserrat', 700, 28px, 34px, #393939);
-        margin: 20px 0 40px;
+        margin: 20px 0 30px;
         text-align: center;
+    }
+    h3 {
+        font-size: 24px;
+        line-height: 29px;
+        text-align: left;
+        margin: 0 0 10px;
     }
     .brands_wrap {
         display: flex;
@@ -906,6 +913,7 @@ img {
             @include _576px() {
                 width: 49%;
                 flex: 0 0 48.5%; 
+                min-height: 214px;
             }
             span {
                 @include _desc('Montserrat', 400, 14px, 16px, #000);
@@ -923,10 +931,43 @@ img {
                 align-items: center;
                 p {
                     @include _desc('Montserrat', 400, 14px, 17px, #000);
+                    @include _460px() {
+                        font-size: 12px
+                    }
                 }
                 a {
                     @include _desc('Montserrat', 400, 14px, 16px, #2F80ED);
-                    
+                    text-decoration-color: #2F80ED;
+                    @include _460px() {
+                        font-size: 12px
+                    }
+                }
+            }
+        }
+    }
+    .brands_partners {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 30px;
+        @include _991px() {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        ul {
+            width: 15%;
+            @include _991px() {
+                width: 20%;
+                margin-top: 14px;
+                padding-right: 10px;
+            }
+            @include _576px() {
+                width: 30%;
+            }
+            li {
+                a {
+                    @include _desc('Source Sans Pro', 400, 14px, 18px, #393939);
+                    text-decoration-color: #393939;
                 }
             }
         }
@@ -2615,6 +2656,12 @@ footer {
                     line-height: 21px;
                 }
             }
+        }
+    }
+    .payment_terms {
+        h5 {
+            @include _desc('Source Sans Pro', 600, 20px, 32px, #333);
+            margin: 12px 0 30px;
         }
     }
     .card_wrapper {
