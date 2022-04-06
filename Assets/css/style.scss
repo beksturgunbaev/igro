@@ -59,6 +59,12 @@ input, select {
         outline: none;
     }
 }
+textarea {
+    resize: none;
+    &:focus {
+        outline: none;
+    }
+}
 .container {
     max-width: 1220px;
     width: 100%;
@@ -601,6 +607,18 @@ img {
                     line-height: 14px;
                     width: max-content;
                 }
+            }
+        }
+    }
+    #blog_head {
+        justify-content: center;
+        @include _991px() {
+            justify-content: flex-start;
+        }
+        li {
+            margin: 10px 20px;
+            @include _576px() {
+                margin: 10px;
             }
         }
     }
@@ -2975,6 +2993,468 @@ footer {
             }
         }
     }
+    // Страниа Blog:
+    .blog {
+        .blog_header {
+            display: flex;
+            align-items: center;
+            padding: 30px 0;
+            @include _768px() {
+                flex-direction: column;
+                padding: 0 0 30px;
+            }
+            h4 {
+                @include _desc('Montserrat', 500, 20px, 32px, #333);
+                max-width: 900px;
+                text-align: center;
+                @include _991px() {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+            form {
+                @include _768px() {
+                    width: 100%;
+                }
+                .search_div {
+                    position: relative;
+                    @include _768px() {
+                        margin-top: 20px;
+                    }
+                    input {
+                        border: 1px solid #E0E0E0;
+                        border-radius: 3px;
+                        min-height: 40px;
+                        width: 280px;
+                        margin-left: 20px;
+                        @include _desc('Montserrat', 400, 12px, 22px, #000);
+                        padding: 0 7px;
+                        @include _768px() {
+                            width: 100%;
+                            margin-left: 0;
+                        }
+                    }
+                    label {
+                        position: absolute;
+                        top: 50%;
+                        right: 14px;
+                        display: flex;
+                        transform: translate(0, -50%);
+                    }
+                }
+            }
+            .article_form {
+                @include _768px() {
+                    order: -1;
+                    margin-bottom: 20px;
+                    width: 100%;
+                }
+            }
+            .ava {
+                text-align: center;
+                img {
+                    border-radius: 50%;
+                    margin: 50px 0 10px;
+                }
+                h4 {
+                    @include _desc('Montserrat', 400, 18px, 22px, #000);
+                }
+                p {
+                    @include _desc('Source Sans Pro', 400, 16px, 20px, #333);
+                    margin-top: 4px;
+                }
+            }
+            .blog_article {
+                h2 {
+                    @include _desc('Montserrat', 400, 26px, 34px, #000);
+                    text-align: center;
+                    margin: 20px 0 40px;
+                }
+                h5 {
+                    @include _desc('Source Sans Pro', 400, 22px, 38px, #4F4F4F);
+                    margin: 7px 0;
+                    @include _576px() {
+                        font-size: 18px;
+                        line-height: 32px;
+                    }
+                }
+                h4 {
+                    @include _desc('Source Sans Pro', 400, 24px, 38px, #333);
+                    margin: 16px 0;
+                    text-align: left;
+                    @include _576px() {
+                        font-size: 21px;
+                        line-height: 28px;
+                    }
+                }
+                p {
+                    @include _desc('Source Sans Pro', 300, 20px, 38px, #333);
+                    @include _576px() {
+                        font-size: 16px;
+                        line-height: 27px;
+                    }
+                }
+            }
+            .news_articles {
+                h4 {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                p {
+                    font-weight: 300;
+                    line-height: 36px;
+                    word-break: break-word;
+                    strong {
+                        font-weight: 600;
+                    }
+                }
+                .line {
+                    height: 1px;
+                    width: 100%;
+                    background: #E0E0E0;
+                    margin: 16px 0;
+                }
+                img {
+                    margin: 10px 0;
+                }
+                .articles_footer {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 30px 0;
+                    @include _768px() {
+                        flex-direction: column;
+                    }
+                    a {
+                        @include _desc('Montserrat', 500, 16px, 20px, #393939);
+                        text-decoration: underline;
+                        @include _768px() {
+                            margin: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+        .seminar_wrap {
+            padding-top: 20px;
+            .seminar_item {
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0;
+                @include _768px() {
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    width: 100%;
+                    margin: 10px 0 40px;
+                }
+                .seminar_desc {
+                    max-width: 590px;
+                    padding: 0 14px;
+                    @include _991px() {
+                        max-width: 400px;
+                    }
+                    @include _768px() {
+                        max-width: 100%;
+                        padding: 9px 0;
+                    }
+                    a {
+                        @include _desc('Montserrat', 600, 22px, 38px, #333);
+                        @include _991px() {
+                            font-size: 18px;
+                            line-height: 26px;
+                        }
+                    }
+                    p {
+                        @include _desc('Source Sans Pro', 400, 16px, 28px, #4F4F4F);
+                        margin-top: 50px;
+                        @include _991px() {
+                            margin-top: 10px;
+                            font-size: 14px;
+                            line-height: 22px;
+                        }
+                    }
+                }
+                .seminar_cost {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    h3 {
+                        @include _desc('Montserrat', 600, 22px, 38px, #333);
+                    }
+                    h4 {
+                        @include _desc('Montserrat', 600, 16px, 20px, #333);
+                    }
+                    .seminar_links {
+                        display: flex;
+                        align-items: center;
+                        @include _768px() {
+                            margin-top: 20px;
+                        }
+                        a {
+                            @include _desc('Source Sans Pro', 400, 14px, 18px, #333);
+                        }
+                        .line {
+                            height: 20px;
+                            width: 1px;
+                            margin: 0 16px;
+                            background: #000;
+                        }
+                    }
+                }
+            }
+        }
+        .seminar_content {
+            padding: 20px 0;
+            @include _768px() {
+                padding: 0 0 20px;
+            }
+            .seminar_info {
+                padding: 10px 0;
+                max-width: 646px;
+                h6 {
+                    @include _desc('Montserrat', 700, 14px, 14px, #333);
+                    margin: 7px 0;
+                }
+                h2 {
+                    @include _desc('Montserrat', 700, 28px, 34px, #333);
+                    margin: 10px 0;
+                    @include _576px() {
+                        font-size: 21px;
+                        line-height: 28px;
+                    }
+                }
+                p {
+                    @include _desc('Source Sans Pro', 400, 14px, 26px, #333);
+                }
+                form {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 20px;
+                    select {
+                        margin-right: 10px;
+                        width: 207px;
+                        height: 40px;
+                        border: 1px solid #BDBDBD;
+                        padding: 0 7px;
+                        @include _desc('Source Sans Pro', 700, 14px, 14px, #393939);
+                    }
+                }
+            }
+            .seminar_text {
+                padding: 10px 0 0;
+                max-width: 845px;
+                h4 {
+                    @include _desc('Montserrat', 700, 24px, 29px, #393939);
+                    margin: 30px 0 5px;
+                    @include _576px() {
+                        font-size: 18px;
+                        line-height: 26px;
+                    }
+                }
+                p {
+                    @include _desc('Source Sans Pro', 400, 18px, 32px, #333);
+                    @include _576px() {
+                        font-size: 16px;
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+        .seminar_course {
+            max-width: 590px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 10px 0;
+            text-align: center;
+            h5 {
+                @include _desc('Montserrat', 500, 18px, 28px, #393939);
+            }   
+            h3 {
+                @include _desc('Montserrat', 600, 22px, 38px, #333);
+                margin: 5px 0;
+                @include _576px() {
+                    font-size: 18px;
+                    line-height: 32px;
+                }
+            }
+            form {
+                margin: 20px 0;
+                .seminar_input {
+                    display: flex;
+                    align-items: center;
+                    margin: 10px 0;
+                    span {
+                        @include _desc('Source Sans Pro', 400, 14px, 18px, #4F4F4F);
+                        min-width: 90px;
+                        margin-right: 10px;
+                    }
+                    input,
+                    textarea,
+                    select {
+                        border: 1px solid #BDBDBD;
+                        min-height: 40px;
+                        width: 100%;
+                        padding: 0 7px;
+                    }
+                    textarea {
+                        min-height: auto;
+                    }
+                    select {
+                        width: 207px;
+                        @include _576px() {
+                            width: 100%;
+                        }
+                    }
+                }
+                .default_btn {
+                    margin-top: 50px;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+        }
+        #seminar_models {
+            max-width: 100%;
+            .seminar_models_wrap {
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0;
+                @include _768px() {
+                    flex-direction: column;
+                    justify-content: flex-start;
+                }
+                .seminar_models_item {
+                    &:first-child {
+                        max-width: 45%;
+                        @include _768px() {
+                            max-width: 100%;
+                        }
+                    }
+                    &:last-child {
+                        max-width: 52%;
+                        width: 100%;
+                        @include _768px() {
+                            max-width: 100%;
+                        }
+                    }
+                    ul {
+                        text-align: left;
+                        li {
+                            @include _desc('Source Sans Pro', 400, 14px, 18px, #333);
+                            list-style: disc;
+                            margin: 20px 0 20px 16px;
+                        }
+                    }
+                    h6 {
+                        @include _desc('Montserrat', 700, 14px, 14px, #393939);
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        .faq {
+            h3 {
+                @include _desc('Montserrat', 500, 18px, 28px, #393939);
+                text-align: center;
+                margin: 30px 0 20px;
+            }
+            .faq_wrap {
+                .faq_item {
+                    margin: 7px 0;
+                    .catalog_link {
+                        @include _desc('Montserrat', 400, 16px, 20px, #393939);
+                        width: 100%;
+                        height: 50px;
+                        background: #F2F2F2;
+                        padding: 0 16px;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        @include _768px() {
+                            font-size: 12px;
+                            line-height: 16px;
+                        }
+                        svg {
+                            transition: .3s all;
+                            &.active {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                    .faq_text {
+                        @include _desc('Source Sans Pro', 400, 18px, 32px, #000);
+                        background: #E0E0E0;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height 0.2s ease-out;  
+                        padding: 0 16px;    
+                        @include _768px() {
+                            font-size: 12px;
+                            line-height: 16px;
+                        }      
+                    }
+                }
+            }
+        }
+        .blog_wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+            .blog_item {
+                max-width: 284px;
+                width: 100%;
+                margin: 10px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @include _576px() {
+                    max-width: 100%;
+                    width: 48%;
+                }
+                .blog_img {
+                    position: relative;
+                    overflow: hidden;
+                    text-align: center;
+                    img {
+                        transition: .2s all;
+                    }
+                }
+                p {
+                    @include _desc('Montserrat', 500, 16px, 26px, #000);
+                    @include _576px() {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+                .desc {
+                    @include _desc('Source Sans Pro', 400, 16px, 26px, #4F4F4F);
+                    margin: 20px 0 14px;
+                    @include _576px() {
+                        font-size: 12px;
+                        line-height: 16px;
+                        margin: 14px 0 8px;
+                    }                    
+                }
+                .date {
+                    @include _desc('Source Sans Pro', 600, 14px, 26px, #333);
+                    @include _576px() {
+                        font-size: 11px;
+                        line-height: 17px;
+                    }
+                }
+                &:hover {
+                    text-decoration: none;
+                    img {
+                        transform: scale(1.1);
+                    }
+                    p {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
 }
 // Страница Контакты:
 #contacts {
@@ -4239,6 +4719,14 @@ footer {
                 }
             }
         }
+        .prev,
+        .next {
+            width: auto;
+            padding: 0 14px 0 8px;
+        }
+        .next {
+            padding: 0 8px 0 14px;
+        }
         .big_pag_btn {
             width: 90px;
             @include _460px() {
@@ -4293,4 +4781,19 @@ footer {
             }
         }
     }
+}
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear,
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0; 
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none; 
 }
