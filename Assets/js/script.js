@@ -1,23 +1,29 @@
 $(document).ready(function () {
-  // Input mask:
-  $(".phone_mask").inputmask("phone", {
-    placeholder: "#",
-    showMaskOnHover: false,
-  });
-
-  Inputmask.extendAliases({
-    my_phone: {
-      alias: "+7(###)###-##-##",
-      phoneCodes: [
-        {
-          mask: "+7(###)###-##-##",
-        },
-      ],
+  // Slider:
+$(".slider_wrapper").slick({
+  dots: false,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  driggable: true,
+  nextArrow: ".right-arrow",
+  prevArrow: ".left-arrow",
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3,
+      },
     },
-  });
-  $(".phone_mask").inputmask("my_phone");
-
-// Slider:
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+  ],
+});  // Slider:
 $(".slider_wrapper").slick({
     dots: false,
     infinite: true,
@@ -42,6 +48,23 @@ $(".slider_wrapper").slick({
       },
     ],
   });  
+  // Input mask:
+  $(".phone_mask").inputmask("phone", {
+    placeholder: "#",
+    showMaskOnHover: false,
+  });
+
+  Inputmask.extendAliases({
+    my_phone: {
+      alias: "+7(###)###-##-##",
+      phoneCodes: [
+        {
+          mask: "+7(###)###-##-##",
+        },
+      ],
+    },
+  });
+  $(".phone_mask").inputmask("my_phone");
 });
 
 // Mobile menu:
