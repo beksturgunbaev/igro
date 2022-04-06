@@ -5083,6 +5083,221 @@ footer .footer_wrap .footer_last_txt a {
   }
 }
 
+#contacts {
+  width: 100%;
+  padding: 0 14px;
+}
+
+@media (max-width: 890px) {
+  #contacts {
+    padding: 20px 0;
+  }
+}
+
+#contacts h3 {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #393939;
+}
+
+#contacts .contacts_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  #contacts .contacts_wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#contacts .contacts_wrap .contacts_item {
+  max-width: 260px;
+  width: 100%;
+  margin: 14px 14px 14px 0;
+  padding-right: 7px;
+}
+
+@media (max-width: 768px) {
+  #contacts .contacts_wrap .contacts_item {
+    max-width: 100%;
+    margin: 10px 0;
+    padding-right: 0;
+  }
+}
+
+#contacts .contacts_wrap .contacts_item:last-child {
+  max-width: 100%;
+}
+
+#contacts .contacts_wrap .contacts_item ul li {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #393939;
+}
+
+#contacts .contacts_wrap .contacts_item ul li:first-child {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  #contacts .contacts_otdel {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (max-width: 576px) {
+  #contacts .contacts_otdel {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#contacts .contacts_otdel .contacts_item {
+  max-width: 360px;
+}
+
+@media (max-width: 576px) {
+  #contacts .contacts_otdel .contacts_item {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+#contacts .contacts_otdel .contacts_item:first-child {
+  margin-right: 20px;
+}
+
+@media (max-width: 576px) {
+  #contacts .contacts_otdel .contacts_item:first-child {
+    margin-right: 0;
+  }
+}
+
+#contacts .contacts_otdel .contacts_item .default_btn {
+  margin-top: 20px;
+}
+
+@media (max-width: 576px) {
+  #contacts .contacts_otdel .contacts_item .default_btn button {
+    width: 100%;
+  }
+}
+
+#contacts .contacts_otdel .contacts_item img {
+  margin: 20px 0 7px;
+}
+
+.contacts_region p {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #393939;
+  margin-top: 14px;
+}
+
+.contacts_region a {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+}
+
+.contacts_region .contacts_wrap {
+  max-width: 550px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+  .contacts_region .contacts_wrap {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts_region .contacts_wrap {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+}
+
+.contacts_region .contacts_wrap .contacts_item {
+  max-width: 240px !important;
+}
+
+@media (max-width: 576px) {
+  .contacts_region .contacts_wrap .contacts_item {
+    max-width: 100% !important;
+  }
+}
+
+.contacts_region .contacts_wrap .contacts_item:last-child {
+  max-width: 260px !important;
+}
+
+@media (max-width: 576px) {
+  .contacts_region .contacts_wrap .contacts_item:last-child {
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .contacts_region .contacts_wrap .contacts_item {
+    text-align: center;
+  }
+}
+
+.contacts_region .contacts_wrap .contacts_item img {
+  margin: 20px 0 10px;
+}
+
+.contacts_region .contacts_wrap .contacts_item ul li:first-child {
+  margin-bottom: 0 !important;
+}
+
+.contacts_region .contacts_wrap .contacts_item ul li:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+.requisites ul {
+  margin-top: 20px;
+}
+
+.requisites ul li {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000;
+  margin: 14px 0;
+}
+
+@media (max-width: 576px) {
+  .requisites ul li {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
 .polic .catalog_list ul {
   padding: 0 5px;
 }

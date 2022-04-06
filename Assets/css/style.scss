@@ -2976,6 +2976,138 @@ footer {
         }
     }
 }
+// Страница Контакты:
+#contacts {
+    width: 100%;
+    padding: 0 14px;
+    @include _890px() {
+        padding: 20px 0;
+    }
+    h3 {
+        @include _desc('Montserrat', 400, 18px, 22px, #393939);
+    }
+    .contacts_wrap {
+        display: flex;
+        @include _768px() {
+            flex-direction: column;
+        }
+        .contacts_item {
+            max-width: 260px;
+            width: 100%;
+            margin: 14px 14px 14px 0;
+            padding-right: 7px;
+            @include _768px() {
+                max-width: 100%;
+                margin: 10px 0;
+                padding-right: 0;
+            }
+            &:last-child {
+                max-width: 100%;
+            }
+            ul {
+                li {
+                    @include _desc('Source Sans Pro', 400, 14px, 28px, #393939);
+                    &:first-child {
+                        font-weight: 700;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .contacts_otdel {
+        @include _768px() {
+            flex-direction: row;
+        }
+        @include _576px() {
+            flex-direction: column;
+        }
+        .contacts_item {
+            max-width: 360px;
+            @include _576px() {
+                max-width: 100%;
+                text-align: center;
+            }
+            &:first-child {
+                margin-right: 20px;
+                @include _576px() {
+                    margin-right: 0;
+                }
+            }
+            .default_btn {
+                margin-top: 20px;
+                @include _576px() {
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+            img {
+                margin: 20px 0 7px;
+            }
+        }
+    }
+}
+.contacts_region {
+    p {
+        @include _desc('Source Sans Pro', 400, 14px, 24px, #393939);
+        margin-top: 14px;
+    }
+    a {
+        @include _desc('Montserrat', 400, 18px, 24px, #000);
+    }
+    .contacts_wrap {
+        max-width: 550px;
+        flex-wrap: wrap;
+        @include _991px() {
+            max-width: 100%;
+        }
+        @include _768px() {
+            flex-direction: row !important;
+        }
+        .contacts_item {
+            max-width: 240px !important;
+            @include _576px() {
+                max-width: 100% !important;
+            }
+            &:last-child {
+                max-width: 260px !important;
+                @include _576px() {
+                    max-width: 100% !important;
+                }
+            }
+            @include _576px() {
+                text-align: center;
+            }
+            img {
+                margin: 20px 0 10px;
+            }
+            ul {
+                li {
+                    &:first-child {
+                        margin-bottom: 0 !important;
+                    }
+                    &:nth-child(2) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+.requisites {
+    ul {
+        margin-top: 20px;
+        li {
+            @include _desc('Montserrat', 400, 18px, 26px, #000);
+            margin: 14px 0;
+            @include _576px() {
+                font-size: 14px;
+                line-height: 18px;
+            }
+        }
+    }
+}
 // Страница polic.html:
 .polic {
     .catalog_list {
