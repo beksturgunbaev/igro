@@ -220,6 +220,15 @@ img {
   width: 100%;
 }
 
+.modal .mobile_menu ul li select {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #333;
+  margin-top: 7px;
+}
+
 .modal .mobile_menu .mobile_contacts {
   padding-top: 20px;
 }
@@ -883,12 +892,6 @@ img {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .categories ul li a span {
-    display: block;
-  }
-}
-
 @media (max-width: 991px) {
   .categories ul li a {
     display: -webkit-box;
@@ -1094,6 +1097,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 #product_slider .container .slider_wrapper .slider_item .slider_icon {

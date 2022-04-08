@@ -211,6 +211,10 @@ img {
                     text-decoration: underline;
                     width: 100%;
                 }
+                select {
+                    @include _desc('Montserrat', 600, 18px, 27px, #333);
+                    margin-top: 7px;
+                }
             }
         }
         .mobile_contacts {
@@ -598,9 +602,6 @@ img {
                 }
                 span {
                     display: none;
-                    @include _768px() {
-                        display: block;
-                    }
                 }
                 @include _991px() {
                     display: flex;
@@ -730,6 +731,7 @@ img {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                text-align: center;
                 .slider_icon {
                     width: 75px;
                     height: 75px;
