@@ -555,6 +555,9 @@ img {
 
 .menus_icon .header_menu .search_div {
   width: 100%;
+  background: url(../img/svg/search.svg);
+  background-repeat: no-repeat;
+  background-position: right 55%;
 }
 
 .menus_icon .header_menu .search_div form input {
@@ -565,7 +568,7 @@ img {
   line-height: 18px;
   color: #000;
   border: none;
-  padding: 7px 0;
+  padding: 7px 20px 7px 0;
   border-bottom: 1px solid #C4C4C4;
 }
 
