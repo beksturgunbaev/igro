@@ -84,3 +84,5 @@ updateList = function () {
     output.innerHTML += "<p>" + input.files.item(i).name + "</p>";
   }
 };
+
+console.log(moment());

@@ -7798,6 +7798,7 @@ footer .footer_wrap .footer_last_txt a {
   font-size: 14px;
   line-height: 18px;
   color: #4f4f4f;
+  min-width: 60px;
 }
 
 .login_input input {
@@ -7968,6 +7969,12 @@ footer .footer_wrap .footer_last_txt a {
   }
 }
 
+@media (max-width: 576px) {
+  .fav_products .fav_product {
+    padding: 7px;
+  }
+}
+
 .fav_products .fav_product .fav_img {
   height: 214px;
   display: -webkit-box;
@@ -7991,7 +7998,7 @@ footer .footer_wrap .footer_last_txt a {
 
 @media (max-width: 576px) {
   .fav_products .fav_product .fav_img {
-    height: 160px;
+    height: 100px;
   }
   .fav_products .fav_product .fav_img img {
     height: 100%;
@@ -8054,6 +8061,90 @@ footer .footer_wrap .footer_last_txt a {
   font-size: 16px;
   line-height: 20px;
   color: #1C5530;
+}
+
+.timetable {
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .timetable {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .timetable .timetable_select {
+    padding: 0 10px;
+  }
+}
+
+.timetable .timetable_select select {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+  max-width: 240px;
+  width: 100%;
+  min-height: 40px;
+  padding: 0 5px;
+  border: 1px solid #BDBDBD;
+}
+
+.timetable .timetable_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+  .timetable .timetable_head {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .timetable .timetable_head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.timetable .timetable_head .timetable_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 7px 10px 0;
+}
+
+.timetable .timetable_head .timetable_item p {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  color: #393939;
+}
+
+.timetable .timetable_head .timetable_item .square {
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50%;
+  margin-right: 4px;
 }
 
 #pagination {
