@@ -532,6 +532,7 @@ img {
         .third_header_item {
             display: flex;
             align-items: center;
+            cursor: pointer;
             @include _768px() {
                 margin: 10px 0;
             }
