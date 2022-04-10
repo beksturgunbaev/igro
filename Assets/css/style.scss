@@ -1792,6 +1792,7 @@ footer {
             }
         }
     }
+    #discounts,
     .discounts {
         display: flex;
         justify-content: space-between;
@@ -1815,6 +1816,7 @@ footer {
             }
             h3 {
                 @include _desc('Montserrat', 700, 24px, 29px, #393939);
+                margin: 0;
                 @include _1200px() {
                     font-size: 21px;
                     line-height: 25px;
@@ -1867,6 +1869,7 @@ footer {
                 align-self: center;
                 padding-top: 7px;
                 border-top: 1px solid #E0E0E0;
+                margin-top: 14px;
                 width: 100%;
                 @include _768px() {
                     margin-top: 20px;
@@ -4666,6 +4669,13 @@ footer {
         h6 {
             @include _desc('Source Sans Pro', 400, 14px, 18px, #333333);
             margin: 7px 0 20px;
+            min-height: 54px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* number of lines to show */
+                    line-clamp: 3; 
+            -webkit-box-orient: vertical;
             @include _576px() {
                 font-size: 12px;
                 line-height: 16px;
@@ -4674,6 +4684,12 @@ footer {
         }
         p {
             @include _desc('Source Sans Pro', 400, 12px, 16px, #828282);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1; /* number of lines to show */
+                    line-clamp: 1; 
+            -webkit-box-orient: vertical;
         }
         h5{
             @include _desc('Source Sans Pro', 700, 14px, 18px, #000);

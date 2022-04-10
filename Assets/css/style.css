@@ -3003,6 +3003,7 @@ footer .footer_wrap .footer_last_txt a {
   text-decoration: underline;
 }
 
+.lk_block #discounts,
 .lk_block .discounts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3017,11 +3018,13 @@ footer .footer_wrap .footer_last_txt a {
 }
 
 @media (max-width: 768px) {
+  .lk_block #discounts,
   .lk_block .discounts {
     padding: 0;
   }
 }
 
+.lk_block #discounts .disc_item,
 .lk_block .discounts .disc_item {
   width: 49%;
   margin: 10px 0;
@@ -3038,9 +3041,11 @@ footer .footer_wrap .footer_last_txt a {
 }
 
 @media (max-width: 768px) {
+  .lk_block #discounts .disc_item,
   .lk_block .discounts .disc_item {
     width: 100%;
   }
+  .lk_block #discounts .disc_item:nth-child(2n),
   .lk_block .discounts .disc_item:nth-child(2n) {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -3048,21 +3053,25 @@ footer .footer_wrap .footer_last_txt a {
   }
 }
 
+.lk_block #discounts .disc_item h3,
 .lk_block .discounts .disc_item h3 {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
   color: #393939;
+  margin: 0;
 }
 
 @media (max-width: 1200px) {
+  .lk_block #discounts .disc_item h3,
   .lk_block .discounts .disc_item h3 {
     font-size: 21px;
     line-height: 25px;
   }
 }
 
+.lk_block #discounts .disc_item .default_desc,
 .lk_block .discounts .disc_item .default_desc {
   font-family: "Montserrat";
   font-weight: 400;
@@ -3073,6 +3082,7 @@ footer .footer_wrap .footer_last_txt a {
 }
 
 @media (max-width: 1200px) {
+  .lk_block #discounts .disc_item .default_desc,
   .lk_block .discounts .disc_item .default_desc {
     font-size: 12px;
     line-height: 15px;
@@ -3081,11 +3091,13 @@ footer .footer_wrap .footer_last_txt a {
 }
 
 @media (max-width: 768px) {
+  .lk_block #discounts .disc_item .default_desc,
   .lk_block .discounts .disc_item .default_desc {
     padding: 10px 0 3px;
   }
 }
 
+.lk_block #discounts .disc_item p,
 .lk_block .discounts .disc_item p {
   font-family: "Montserrat";
   font-weight: 500;
@@ -3095,12 +3107,14 @@ footer .footer_wrap .footer_last_txt a {
 }
 
 @media (max-width: 1200px) {
+  .lk_block #discounts .disc_item p,
   .lk_block .discounts .disc_item p {
     font-size: 14px;
     line-height: 21px;
   }
 }
 
+.lk_block #discounts .disc_item .exclusive_brands,
 .lk_block .discounts .disc_item .exclusive_brands {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3111,6 +3125,7 @@ footer .footer_wrap .footer_last_txt a {
   margin: 12px 0;
 }
 
+.lk_block #discounts .disc_item .exclusive_brands span,
 .lk_block .discounts .disc_item .exclusive_brands span {
   width: 33%;
   font-family: "Montserrat";
@@ -3120,10 +3135,12 @@ footer .footer_wrap .footer_last_txt a {
   color: #000;
 }
 
+.lk_block #discounts .disc_item .exclusive_brands span:last-child,
 .lk_block .discounts .disc_item .exclusive_brands span:last-child {
   color: #EB5757;
 }
 
+.lk_block #discounts .disc_item .retro_bonus,
 .lk_block .discounts .disc_item .retro_bonus {
   font-family: "Montserrat";
   font-weight: 700;
@@ -3134,6 +3151,7 @@ footer .footer_wrap .footer_last_txt a {
 }
 
 @media (max-width: 1200px) {
+  .lk_block #discounts .disc_item .retro_bonus,
   .lk_block .discounts .disc_item .retro_bonus {
     font-size: 14px;
     line-height: 14px;
@@ -3141,6 +3159,7 @@ footer .footer_wrap .footer_last_txt a {
   }
 }
 
+.lk_block #discounts .disc_item .disc_sum,
 .lk_block .discounts .disc_item .disc_sum {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3152,15 +3171,18 @@ footer .footer_wrap .footer_last_txt a {
       align-self: center;
   padding-top: 7px;
   border-top: 1px solid #E0E0E0;
+  margin-top: 14px;
   width: 100%;
 }
 
 @media (max-width: 768px) {
+  .lk_block #discounts .disc_item .disc_sum,
   .lk_block .discounts .disc_item .disc_sum {
     margin-top: 20px;
   }
 }
 
+.lk_block #discounts .disc_item .disc_sum h4,
 .lk_block .discounts .disc_item .disc_sum h4 {
   font-family: "Montserrat";
   font-weight: 700;
@@ -3170,6 +3192,7 @@ footer .footer_wrap .footer_last_txt a {
 }
 
 @media (max-width: 1200px) {
+  .lk_block #discounts .disc_item .disc_sum h4,
   .lk_block .discounts .disc_item .disc_sum h4 {
     font-size: 16px;
     line-height: 21px;
@@ -3177,6 +3200,7 @@ footer .footer_wrap .footer_last_txt a {
 }
 
 @media (max-width: 768px) {
+  .lk_block #discounts .disc_img,
   .lk_block .discounts .disc_img {
     margin-top: 40px;
   }
@@ -8013,6 +8037,14 @@ footer .footer_wrap .footer_last_txt a {
   line-height: 18px;
   color: #333333;
   margin: 7px 0 20px;
+  min-height: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 @media (max-width: 576px) {
@@ -8029,6 +8061,13 @@ footer .footer_wrap .footer_last_txt a {
   font-size: 12px;
   line-height: 16px;
   color: #828282;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .fav_products .fav_product h5 {
