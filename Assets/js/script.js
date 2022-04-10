@@ -36,6 +36,18 @@ closeBtn.onclick = function () {
   bodyScroll.classList.remove("no_scroll");
 };
 
+// Add number:
+let numForm = document.getElementById('form-num');
+
+function addNum() {
+  modal.classList.add('active');
+  numForm.classList.add('active');
+  bodyScroll.classList.add("no_scroll");
+}
+function closeModal() {
+  modal.classList.remove('active');
+  bodyScroll.classList.remove("no_scroll");
+}
 // Accordion:
 const acc = document.getElementsByClassName("catalog_link");
 
@@ -75,7 +87,6 @@ for (let i = 0; i < cityOption.length; i++) {
 }
 
 //  Choose file:
-
 updateList = function () {
   let input = document.getElementById("file");
   let output = document.getElementById("fileList");
@@ -86,7 +97,6 @@ updateList = function () {
 };
 
 // Counter:
-
 let plusBtn = document.querySelectorAll('.plus');
 let minusBtn = document.querySelectorAll('.minus');
 
@@ -117,27 +127,23 @@ for(let i = 0; i < plusBtn.length; i++) {
   });
 }
 
-// let plus = document.querySelector('.counter_btn_plus');
-// let minus = document.querySelector('.counter_btn_minus');
-// let costTwo = 365;
+let plusIcon = document.getElementById('plus-counter');
+let minusIcon = document.getElementById('minus-counter');
+let productCost = document.getElementById('product-cost');
+let productCounter = document.getElementById('product-counter');
+let totalCost = 365;
 
-// plus.onclick = function() {
-//   let thisCount = this.previousElementSibling;
-//   thisCount.innerText++;
-//   let sumTwo = this.closest('.counter').previousElementSibling.children[0];
-//   sumTwo.innerText = cost += 365;
-// }
+plusIcon.addEventListener('click', function() {
+  productCounter.innerText++;
+  productCost.innerText = totalCost += 365;
+});
 
-// minus.onclick = function() {
-//   let thisCount = this.nextElementSibling;
-//     thisCount.innerText--;
-//     if(thisCount.innerText < 0) {
-//       thisCount.innerText = 0;
-//     }
-//   let sumTwo = this.closest('.counter').previousElementSibling.children[0];
-//     if(sumTwo.innerText <= 0) {
-//       sumTwo.innerText = 0;
-//     } else {
-//       sumTwo.innerText = costTwo -= 365;
-//     }
-// }
+minusIcon.addEventListener('click', function() {
+  if(productCost.innerText <= 0) {
+    productCost.innerText = 0;
+    productCounter.innerText = 0;
+  } else {
+    productCost.innerText = totalCost -= 365;
+    productCounter.innerText--;
+  }
+});

@@ -251,6 +251,82 @@ img {
   max-width: 170px;
 }
 
+.modal #form-num {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 360px;
+  width: 94%;
+  padding: 20px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal #form-num.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (max-width: 576px) {
+  .modal #form-num {
+    max-width: 100%;
+  }
+}
+
+.modal #form-num .close_btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+  font-size: 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 30px;
+  height: 30px;
+}
+
+.modal #form-num h3 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.modal #form-num div {
+  margin: 10px 0;
+}
+
+.modal #form-num div input {
+  width: 100%;
+  border: 1px solid #dddcdc;
+  min-height: 40px;
+  padding: 0 5px;
+}
+
+.modal #form-num div p {
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.modal #form-num .default_btn {
+  margin: 20px 0 0 !important;
+}
+
+.modal #form-num .default_btn button {
+  width: 100%;
+}
+
 .links ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4776,25 +4852,25 @@ footer .footer_wrap .footer_last_txt a {
   margin-bottom: 10px;
 }
 
-.catalog .card_wrapper .card_info .card_info_wrap .card_info_wrap_right .counter span {
+.catalog .card_wrapper .card_info .card_info_wrap .card_info_wrap_right .counter div {
   font-family: "Montserrat";
   font-weight: 300;
-  font-size: 25px;
+  font-size: 21px;
   line-height: 25px;
   color: #333;
-  padding: 5px;
+  padding: 5px 7px;
   border: 1px solid #E0E0E0;
 }
 
-.catalog .card_wrapper .card_info .card_info_wrap .card_info_wrap_right .counter span:nth-child(2) {
+.catalog .card_wrapper .card_info .card_info_wrap .card_info_wrap_right .counter div:nth-child(2) {
   font-weight: 700;
 }
 
-.catalog .card_wrapper .card_info .card_info_wrap .card_info_wrap_right .counter span:first-child {
+.catalog .card_wrapper .card_info .card_info_wrap .card_info_wrap_right .counter div:first-child {
   cursor: pointer;
 }
 
-.catalog .card_wrapper .card_info .card_info_wrap .card_info_wrap_right .counter span:nth-child(3) {
+.catalog .card_wrapper .card_info .card_info_wrap .card_info_wrap_right .counter div:nth-child(3) {
   cursor: pointer;
 }
 

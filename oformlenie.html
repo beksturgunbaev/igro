@@ -281,7 +281,7 @@
                                 <li>nikolaev@mail.ru</li>
                                 <li>+7 (495) 109-33-33</li>
                             </ul>
-                            <a href="#">добавить еще номер</a>
+                            <a onclick="addNum();" href="javascript:void(0)">добавить еще номер</a>
                         </div>
                     </div>
                     <div class="comment">
@@ -568,8 +568,26 @@
             </div>
             <p>Россия, Москва, ул. Грайвороновская д.4</p>
         </div>
+        <div id="form-num">
+            <div class="close_btn" onclick="closeModal();">&times;</div>
+            <form action="">
+                <h3>Добавить номер</h3>
+                <div>
+                    <p>Добавить номер</p>
+                    <input type="tel" name="phone" class="phone_mask" placeholder="+7(___)___-__-__" required>
+                </div>
+                <div>
+                    <p>Добавить второй номер</p>
+                    <input type="tel" name="phone" class="phone_mask" placeholder="+7(___)___-__-__" required>
+                </div>
+                <div class="default_btn">
+                    <button type="submit">Сохранить</button>
+                </div>
+            </form>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.17/jquery.inputmask.min.js"></script>
     <script src="./Assets/js/script.js"></script>
 </body>
 </html>

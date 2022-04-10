@@ -231,6 +231,60 @@ img {
             max-width: 170px;
         }
     }
+    #form-num {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 360px;
+        width: 94%;
+        padding: 20px;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        transition: .3s all;
+        opacity: 0;
+        visibility: hidden;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        @include _576px() {
+            max-width: 100%;
+        }
+        .close_btn {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            cursor: pointer;
+            font-size: 46px;
+            display: flex;
+            align-items: center;
+            height: 30px;
+            height: 30px;
+        }
+        h3 {
+            text-align: center;
+            padding: 20px 0;
+        }
+        div {
+            margin: 10px 0;
+            input {
+                width: 100%;
+                border: 1px solid #dddcdc;
+                min-height: 40px;
+                padding: 0 5px;
+            }
+            p {
+                @include _desc('Source Sans Pro', 400, 14px, 18px, #333);
+                margin-bottom: 5px;
+            }
+        }
+        .default_btn {
+            margin: 20px 0 0 !important;
+            button {
+                width: 100%;
+            }
+        }
+    }
 }
 .links {
     ul {
@@ -2779,9 +2833,9 @@ footer {
                         display: flex;
                         align-items: center;
                         margin-bottom: 10px;
-                        span {
-                            @include _desc('Montserrat', 300, 25px, 25px, #333);
-                            padding: 5px;
+                        div {
+                            @include _desc('Montserrat', 300, 21px, 25px, #333);
+                            padding: 5px 7px;
                             border: 1px solid #E0E0E0;
                             &:nth-child(2) {
                                 font-weight: 700;
