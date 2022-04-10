@@ -3142,6 +3142,14 @@ footer {
                 }
             }
         }
+        .news_item_header {
+            .article_from {
+                @include _768px() {
+                    order: -1;
+                    margin-bottom: 20px;
+                }
+            }
+        }
         .seminar_wrap {
             padding-top: 20px;
             .seminar_item {

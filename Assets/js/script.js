@@ -85,4 +85,59 @@ updateList = function () {
   }
 };
 
-console.log(moment());
+// Counter:
+
+let plusBtn = document.querySelectorAll('.plus');
+let minusBtn = document.querySelectorAll('.minus');
+
+let cost = 495;
+
+for(let i = 0; i < plusBtn.length; i++) {
+  plusBtn[i].addEventListener('click', function() {
+    let thisCount = this.previousElementSibling;
+    thisCount.innerText++;
+    let sum = this.closest('.korzina_counter').nextElementSibling.children[0].children[0];
+    sum.innerText = cost += 495;
+  });
+}
+
+for(let i = 0; i < plusBtn.length; i++) {
+  minusBtn[i].addEventListener('click', function() {
+    let thisCount = this.nextElementSibling;
+    thisCount.innerText--;
+    if(thisCount.innerText < 0) {
+      thisCount.innerText = 0;
+    }
+    let sum = this.closest('.korzina_counter').nextElementSibling.children[0].children[0];
+    if(sum.innerText <= 0) {
+      sum.innerText = 0;
+    } else {
+      sum.innerText = cost -= 495;
+    }
+  });
+}
+
+// let plus = document.querySelector('.counter_btn_plus');
+// let minus = document.querySelector('.counter_btn_minus');
+// let costTwo = 365;
+
+// plus.onclick = function() {
+//   let thisCount = this.previousElementSibling;
+//   thisCount.innerText++;
+//   let sumTwo = this.closest('.counter').previousElementSibling.children[0];
+//   sumTwo.innerText = cost += 365;
+// }
+
+// minus.onclick = function() {
+//   let thisCount = this.nextElementSibling;
+//     thisCount.innerText--;
+//     if(thisCount.innerText < 0) {
+//       thisCount.innerText = 0;
+//     }
+//   let sumTwo = this.closest('.counter').previousElementSibling.children[0];
+//     if(sumTwo.innerText <= 0) {
+//       sumTwo.innerText = 0;
+//     } else {
+//       sumTwo.innerText = costTwo -= 365;
+//     }
+// }

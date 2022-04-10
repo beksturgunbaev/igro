@@ -5385,6 +5385,15 @@ footer .footer_wrap .footer_last_txt a {
   }
 }
 
+@media (max-width: 768px) {
+  .catalog .blog .news_item_header .article_from {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 20px;
+  }
+}
+
 .catalog .blog .seminar_wrap {
   padding-top: 20px;
 }
