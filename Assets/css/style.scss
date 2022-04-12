@@ -1091,8 +1091,16 @@ img {
             }
             .proff_img {
                 margin-bottom: 7px;
+                position: relative;
+                overflow: hidden;
+                img {
+                    transition: .2s all;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
             }
-            a {
+            p {
                 @include _desc('Montserrat', 500, 16px, 20px, #000);
                 @include _768px() {
                     font-size: 14px;
@@ -1158,6 +1166,22 @@ img {
                     line-height: 21px;
                 }
             }
+        }
+    }
+}
+.info_desc {
+    a {
+        @include _title(700, 24px, 34px, #000, uppercase);
+        margin-bottom: 5px;
+        &:hover {
+            text-decoration: underline;
+        }
+        @include _890px() {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        @include _576px() {
+            margin-top: 10px;
         }
     }
 }
@@ -2714,6 +2738,8 @@ footer {
                         }
                         .product_item_img {
                             overflow: hidden;
+                            max-width: 260px;
+                            width: 100%;
                             img {
                                 transition: .2s all;
                             }
