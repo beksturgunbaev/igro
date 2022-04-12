@@ -313,7 +313,7 @@ img {
                 margin: 10px;
             }
             a {
-                @include _desc('Montserrat', 400, 14px, 17px, #000);
+                @include _desc('Source Sans Pro', 400, 14px, 18px, #000);
                 &.active {
                     text-decoration: underline;
                 }
@@ -587,6 +587,7 @@ img {
             display: flex;
             align-items: center;
             cursor: pointer;
+            text-decoration: none;
             @include _768px() {
                 margin: 10px 0;
             }
@@ -1091,8 +1092,16 @@ img {
             }
             .proff_img {
                 margin-bottom: 7px;
+                position: relative;
+                overflow: hidden;
+                img {
+                    transition: .2s all;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
             }
-            a {
+            p {
                 @include _desc('Montserrat', 500, 16px, 20px, #000);
                 @include _768px() {
                     font-size: 14px;
@@ -1158,6 +1167,22 @@ img {
                     line-height: 21px;
                 }
             }
+        }
+    }
+}
+.info_desc {
+    a {
+        @include _title(700, 24px, 34px, #000, uppercase);
+        margin-bottom: 5px;
+        &:hover {
+            text-decoration: underline;
+        }
+        @include _890px() {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        @include _576px() {
+            margin-top: 10px;
         }
     }
 }
@@ -2580,26 +2605,41 @@ footer {
                         flex: 0 0 48.5%;
                         margin: 6px 0;
                     }
-                    p {
-                        @include _desc('Montserrat', 600, 14px, 18px, #000);
-                        margin: 7px 0 10px;
-                        @include _890px() {
-                            font-size: 10px;
-                            line-height: 14px;
+                    a {
+                        text-decoration: none;
+                        &:hover {
+                            img {
+                                transform: scale(1.1);
+                            }
                         }
-                    }
-                    .product_txt {
-                        @include _desc('Montserrat', 700, 12px, 15px, #fff);
-                        background: rgba(119, 138, 144, 0.7);
-                        min-height: 53px;
-                        text-transform: uppercase;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        @include _890px() {
-                            font-size: 10px;
-                            line-height: 12px;
-                            min-height: 40px;
+                        .product_img {
+                            position: relative;
+                            overflow: hidden;
+                            img {
+                                transition: .2s all;
+                            }
+                        }
+                        p {
+                            @include _desc('Montserrat', 600, 14px, 18px, #000);
+                            margin: 7px 0 10px;
+                            @include _890px() {
+                                font-size: 10px;
+                                line-height: 14px;
+                            }
+                        }
+                        .product_txt {
+                            @include _desc('Montserrat', 700, 12px, 15px, #fff);
+                            background: rgba(119, 138, 144, 0.7);
+                            min-height: 53px;
+                            text-transform: uppercase;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            @include _890px() {
+                                font-size: 10px;
+                                line-height: 12px;
+                                min-height: 40px;
+                            }
                         }
                     }
                 }
@@ -2714,6 +2754,8 @@ footer {
                         }
                         .product_item_img {
                             overflow: hidden;
+                            max-width: 260px;
+                            width: 100%;
                             img {
                                 transition: .2s all;
                             }
@@ -3195,6 +3237,11 @@ footer {
                         }
                     }
                 }
+            }
+        }
+        #blog_header_extra {
+            @include _768px() {
+                padding: 20px 0 0 !important;
             }
         }
         .news_item_header {
@@ -4007,6 +4054,14 @@ footer {
         }
         .oform_order {
             width: 28%;
+            .sticky_class {
+                position: sticky;
+                top: 20px;
+                background: #fff;
+                @include _768px() {
+                    position: inherit;
+                }
+            }
             @include _768px() {
                 width: 100%;
             }

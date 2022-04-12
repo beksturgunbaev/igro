@@ -1,23 +1,3 @@
-$(document).ready(function () {  
-  // Input mask:
-  $(".phone_mask").inputmask("phone", {
-    placeholder: "#",
-    showMaskOnHover: false,
-  });
-
-  Inputmask.extendAliases({
-    my_phone: {
-      alias: "+7(###)###-##-##",
-      phoneCodes: [
-        {
-          mask: "+7(###)###-##-##",
-        },
-      ],
-    },
-  });
-  $(".phone_mask").inputmask("my_phone");
-});
-
 // Mobile menu:
 let burgerBtn = document.querySelector(".burger_menu"),
   closeBtn = document.querySelector(".close_btn"),
@@ -70,8 +50,12 @@ for (let i = 0; i < acc.length; i++) {
 let dropdown = document.querySelectorAll(".dropp_down");
 
 for (let i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function () {
-    this.nextElementSibling.classList.toggle("active");
+  document.addEventListener('click', function(event) {
+    if (!dropdown[i].contains(event.target)) {
+      dropdown[i].nextElementSibling.classList.remove("active");
+    } else {
+      dropdown[i].nextElementSibling.classList.toggle("active");
+    }
   });
 }
 
