@@ -383,10 +383,10 @@ img {
 }
 
 .links .lk_menus li a {
-  font-family: "Montserrat";
+  font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 18px;
   color: #000;
 }
 
@@ -845,6 +845,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -4425,7 +4426,26 @@ footer .footer_wrap .footer_last_txt a {
   }
 }
 
-.catalog .catalog_block .catalog_list .catalog_product .product p {
+.catalog .catalog_block .catalog_list .catalog_product .product a {
+  text-decoration: none;
+}
+
+.catalog .catalog_block .catalog_list .catalog_product .product a:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.catalog .catalog_block .catalog_list .catalog_product .product a .product_img {
+  position: relative;
+  overflow: hidden;
+}
+
+.catalog .catalog_block .catalog_list .catalog_product .product a .product_img img {
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+
+.catalog .catalog_block .catalog_list .catalog_product .product a p {
   font-family: "Montserrat";
   font-weight: 600;
   font-size: 14px;
@@ -4435,13 +4455,13 @@ footer .footer_wrap .footer_last_txt a {
 }
 
 @media (max-width: 890px) {
-  .catalog .catalog_block .catalog_list .catalog_product .product p {
+  .catalog .catalog_block .catalog_list .catalog_product .product a p {
     font-size: 10px;
     line-height: 14px;
   }
 }
 
-.catalog .catalog_block .catalog_list .catalog_product .product .product_txt {
+.catalog .catalog_block .catalog_list .catalog_product .product a .product_txt {
   font-family: "Montserrat";
   font-weight: 700;
   font-size: 12px;
@@ -4462,7 +4482,7 @@ footer .footer_wrap .footer_last_txt a {
 }
 
 @media (max-width: 890px) {
-  .catalog .catalog_block .catalog_list .catalog_product .product .product_txt {
+  .catalog .catalog_block .catalog_list .catalog_product .product a .product_txt {
     font-size: 10px;
     line-height: 12px;
     min-height: 40px;
@@ -5499,6 +5519,12 @@ footer .footer_wrap .footer_last_txt a {
 @media (max-width: 768px) {
   .catalog .blog .blog_header .news_articles .articles_footer a {
     margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog .blog #blog_header_extra {
+    padding: 20px 0 0 !important;
   }
 }
 
@@ -6936,6 +6962,19 @@ footer .footer_wrap .footer_last_txt a {
 
 .korzina .oform .oform_order {
   width: 28%;
+}
+
+.korzina .oform .oform_order .sticky_class {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .korzina .oform .oform_order .sticky_class {
+    position: inherit;
+  }
 }
 
 @media (max-width: 768px) {
