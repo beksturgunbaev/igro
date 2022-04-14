@@ -785,28 +785,32 @@ img {
                 margin: 0 -10px;
             }
             .slider_item {
-                min-height: 171px;
                 background: #F5F5F5;
                 display: flex;
                 justify-content: center;
+                flex-direction: column;
                 align-items: center;
                 text-align: center;
-                .slider_icon {
-                    width: 75px;
-                    height: 75px;
-                    border-radius: 50%;
-                    background: #91A2A8;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin: 0 auto 14px;
-                }
                 a {
-                    @include _title(700, 16px, 20px, #000, uppercase);
-                    text-align: center;
-                    @include _576px() {
-                        font-size: 12px;
-                        font-weight: 600;
+                    width: 100%;
+                    padding: 16px 0;
+                    .slider_icon {
+                        width: 75px;
+                        height: 75px;
+                        border-radius: 50%;
+                        background: #91A2A8;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0 auto 14px;
+                    }
+                    p {
+                        @include _title(700, 16px, 20px, #000, uppercase);
+                        text-align: center;
+                        @include _576px() {
+                            font-size: 12px;
+                            font-weight: 600;
+                        }
                     }
                 }
             }
@@ -824,6 +828,7 @@ img {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                text-decoration: none;
                 @include _576px() {
                     margin: 10px 0;
                 }
@@ -866,6 +871,7 @@ img {
             padding: 20px;
             margin: 10px 0;
             background: #F5F5F5;
+            text-decoration: none;
             @include _991px() {
                 min-height: auto;
             }
@@ -882,6 +888,11 @@ img {
             &:nth-child(2) {
                 background: transparent;
                 border: 1px solid #E0E0E0;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
             }
             .product_info {
                 max-width: 370px;
@@ -927,6 +938,9 @@ img {
                 }
                 @include _576px() {
                     max-width: 100px;
+                }
+                img {
+                    transition: .2s all;
                 }
             }
         }
@@ -1014,7 +1028,7 @@ img {
                         font-size: 12px
                     }
                 }
-                a {
+                h6 {
                     @include _desc('Montserrat', 400, 14px, 16px, #2F80ED);
                     text-decoration-color: #2F80ED;
                     @include _460px() {
