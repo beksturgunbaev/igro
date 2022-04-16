@@ -2770,6 +2770,13 @@ footer {
                             overflow: hidden;
                             max-width: 260px;
                             width: 100%;
+                            @include _576px() {
+                                height: 170px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 10px;
+                            }
                             img {
                                 transition: .2s all;
                             }
@@ -4791,7 +4798,8 @@ footer {
                 transition: .2s all;
             }
             @include _576px() {
-                height: 100px;
+                height: 170px;
+                padding: 10px;
                 img {
                     height: 100%;
                     padding-bottom: 10px;
