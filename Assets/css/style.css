@@ -162,12 +162,13 @@ img {
 .modal .mobile_menu {
   position: absolute;
   right: -100%;
-  width: 80%;
+  width: 90%;
   height: 100%;
   padding: 20px;
   background: #fff;
   -webkit-transition: .3s all;
   transition: .3s all;
+  overflow-y: scroll;
 }
 
 .modal .mobile_menu.active {
@@ -200,55 +201,112 @@ img {
 }
 
 .modal .mobile_menu ul {
-  padding-top: 90px;
+  padding-top: 50px;
 }
 
 .modal .mobile_menu ul li {
-  margin: 10px 0;
+  margin: 5px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 5px 0;
 }
 
-.modal .mobile_menu ul li a {
+.modal .mobile_menu ul li:last-child {
+  border-bottom: none;
+}
+
+.modal .mobile_menu ul li span {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000;
+}
+
+.modal .mobile_menu ul li svg {
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+
+.modal .mobile_menu ul li svg.active {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.modal .mobile_menu ul .mob_subtxt {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.modal .mobile_menu ul .mob_subtxt ul {
+  padding-top: 0 !important;
+  margin: 4px 0 4px 12px;
+}
+
+.modal .mobile_menu ul .mob_subtxt ul li {
+  border: none;
+  padding: 2px 0;
+  margin: 7px 0;
+}
+
+.modal .mobile_menu ul .mob_subtxt ul li a {
   font-family: "Montserrat";
   font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
-  color: #333;
-  text-decoration: underline;
-  width: 100%;
-}
-
-.modal .mobile_menu ul li select {
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
-  color: #333;
-  margin-top: 7px;
-}
-
-.modal .mobile_menu .mobile_contacts {
-  padding-top: 20px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
 }
 
 .modal .mobile_menu .mobile_contacts div a {
   font-family: "Montserrat";
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 27px;
-  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: #000;
+}
+
+.modal .mobile_menu .mob_links {
+  margin-top: 5px;
+}
+
+.modal .mobile_menu .mob_links a {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: #778A90;
+  text-decoration: underline;
+}
+
+.modal .mobile_menu .mob_footer_txt {
+  margin-top: 50px;
+}
+
+.modal .mobile_menu .mob_footer_txt span {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000;
 }
 
 .modal .mobile_menu p {
   font-family: "Montserrat";
   font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 12px;
+  line-height: 18px;
   color: #333;
-  padding-top: 30px;
-  max-width: 170px;
+  padding-top: 10px;
 }
 
 .modal #form-num {
