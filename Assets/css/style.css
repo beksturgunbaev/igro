@@ -224,12 +224,17 @@ img {
 }
 
 .modal .mobile_menu ul li span,
-.modal .mobile_menu ul li a {
+.modal .mobile_menu ul li a,
+.modal .mobile_menu ul li select {
   font-family: "Montserrat";
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
   color: #000;
+}
+
+.modal .mobile_menu ul li select {
+  margin-left: -3px;
 }
 
 .modal .mobile_menu ul li svg {

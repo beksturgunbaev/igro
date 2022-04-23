@@ -215,8 +215,12 @@ img {
                     border-bottom: none;
                 }
                 span,
-                a {
+                a,
+                select {
                     @include _desc('Montserrat', 500, 14px, 18px, #000);
+                }
+                select {
+                    margin-left: -3px;
                 }
                 svg {
                     transition: .2s all;
