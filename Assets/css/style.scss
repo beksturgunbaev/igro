@@ -177,7 +177,7 @@ img {
     .mobile_menu {
         position: absolute;
         right: -100%;
-        width: 90%;
+        width: 100%;
         height: 100%;
         padding: 20px;
         background: #fff;
@@ -203,7 +203,7 @@ img {
             }
         }
         ul {
-            padding-top: 50px;
+            padding-top: 20px;
             li {
                 margin: 5px 0;
                 display: flex;
@@ -214,7 +214,8 @@ img {
                 &:last-child {
                     border-bottom: none;
                 }
-                span {
+                span,
+                a {
                     @include _desc('Montserrat', 500, 14px, 18px, #000);
                 }
                 svg {
@@ -257,9 +258,12 @@ img {
             }
         }
         .mob_footer_txt {
-            margin-top: 50px;
-            span {
+            margin-top: 30px;
+            span, a {
                 @include _desc('Montserrat',400 , 12px, 15px, #000);
+            }
+            a {
+                text-decoration: underline;
             }
         }
         p {
@@ -510,6 +514,9 @@ img {
                     border-bottom: 1px solid #C4C4C4;
                     &::placeholder {
                         color: #C4C4C4;
+                    }
+                    @include _576px() {
+                        padding: 0 20px 6px 0;
                     }
                 }
             }

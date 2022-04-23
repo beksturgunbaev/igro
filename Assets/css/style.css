@@ -162,7 +162,7 @@ img {
 .modal .mobile_menu {
   position: absolute;
   right: -100%;
-  width: 90%;
+  width: 100%;
   height: 100%;
   padding: 20px;
   background: #fff;
@@ -201,7 +201,7 @@ img {
 }
 
 .modal .mobile_menu ul {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .modal .mobile_menu ul li {
@@ -223,7 +223,8 @@ img {
   border-bottom: none;
 }
 
-.modal .mobile_menu ul li span {
+.modal .mobile_menu ul li span,
+.modal .mobile_menu ul li a {
   font-family: "Montserrat";
   font-weight: 500;
   font-size: 14px;
@@ -289,15 +290,19 @@ img {
 }
 
 .modal .mobile_menu .mob_footer_txt {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
-.modal .mobile_menu .mob_footer_txt span {
+.modal .mobile_menu .mob_footer_txt span, .modal .mobile_menu .mob_footer_txt a {
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
   color: #000;
+}
+
+.modal .mobile_menu .mob_footer_txt a {
+  text-decoration: underline;
 }
 
 .modal .mobile_menu p {
@@ -720,6 +725,12 @@ img {
 
 .menus_icon .header_menu .search_div form input::placeholder {
   color: #C4C4C4;
+}
+
+@media (max-width: 576px) {
+  .menus_icon .header_menu .search_div form input {
+    padding: 0 20px 6px 0;
+  }
 }
 
 .menus_icon .header_menu .icons {
