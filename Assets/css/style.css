@@ -130,6 +130,32 @@ img {
   opacity: 1;
 }
 
+.mob_subtxt {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.mob_subtxt ul {
+  padding-top: 0 !important;
+  margin: 4px 0 4px 12px;
+}
+
+.mob_subtxt ul li {
+  border: none;
+  padding: 2px 0;
+  margin: 7px 0;
+}
+
+.mob_subtxt ul li a {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000;
+}
+
 .modal {
   position: fixed;
   overflow: hidden;
@@ -245,32 +271,6 @@ img {
 .modal .mobile_menu ul li svg.active {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
-}
-
-.modal .mobile_menu ul .mob_subtxt {
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.2s ease-out;
-  transition: max-height 0.2s ease-out;
-}
-
-.modal .mobile_menu ul .mob_subtxt ul {
-  padding-top: 0 !important;
-  margin: 4px 0 4px 12px;
-}
-
-.modal .mobile_menu ul .mob_subtxt ul li {
-  border: none;
-  padding: 2px 0;
-  margin: 7px 0;
-}
-
-.modal .mobile_menu ul .mob_subtxt ul li a {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  color: #000;
 }
 
 .modal .mobile_menu .mobile_contacts div a {
@@ -2546,6 +2546,34 @@ footer .footer_wrap .footer_menu .footer_menu_item .footer_extra {
 
 footer .footer_wrap .footer_menu .footer_menu_item .footer_extra ul:last-child {
   margin-left: 30px;
+}
+
+footer .footer_wrap .footer_menu .footer_menu_item_mob {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  footer .footer_wrap .footer_menu .footer_menu_item_mob {
+    display: block;
+    width: 130px;
+  }
+  footer .footer_wrap .footer_menu .footer_menu_item_mob ul li span {
+    margin-right: 10px;
+  }
+  footer .footer_wrap .footer_menu .footer_menu_item_mob ul li svg {
+    -webkit-transition: .2s all;
+    transition: .2s all;
+  }
+  footer .footer_wrap .footer_menu .footer_menu_item_mob ul li svg.active {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+}
+
+@media (max-width: 460px) {
+  footer .footer_wrap .footer_menu .footer_menu_item_mob {
+    width: 100%;
+  }
 }
 
 footer .footer_wrap .footer_last_txt {
