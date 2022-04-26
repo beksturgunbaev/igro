@@ -1551,8 +1551,14 @@ footer {
                 @include _991px() {
                     display: block;
                     width: 130px;
+                    margin: 20px 0 0;
                     ul {
                         li {
+                            border-bottom: 1px solid #E0E0E0;
+                            padding-bottom: 7px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
                             span {
                                 margin-right: 10px;
                             }
