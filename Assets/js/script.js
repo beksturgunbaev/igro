@@ -9,7 +9,7 @@ burgerBtn.onclick = function () {
   modal.classList.add("active");
   mobileMenu.classList.add("active");
   bodyScroll.classList.add("no_scroll");
-};
+}
 closeBtn.onclick = function () {
   modal.classList.remove("active");
   mobileMenu.classList.remove("active");
@@ -50,7 +50,7 @@ for (let i = 0; i < acc.length; i++) {
 let dropdown = document.querySelectorAll(".dropp_down");
 
 for (let i = 0; i < dropdown.length; i++) {
-  document.addEventListener('click', function(event) {
+  document.addEventListener('click', function (event) {
     if (!dropdown[i].contains(event.target)) {
       dropdown[i].nextElementSibling.classList.remove("active");
     } else {
@@ -86,8 +86,8 @@ let minusBtn = document.querySelectorAll('.minus');
 
 let cost = 495;
 
-for(let i = 0; i < plusBtn.length; i++) {
-  plusBtn[i].addEventListener('click', function() {
+for (let i = 0; i < plusBtn.length; i++) {
+  plusBtn[i].addEventListener('click', function () {
     let thisCount = this.previousElementSibling;
     thisCount.innerText++;
     let sum = this.closest('.korzina_counter').nextElementSibling.children[0].children[0];
@@ -95,15 +95,15 @@ for(let i = 0; i < plusBtn.length; i++) {
   });
 }
 
-for(let i = 0; i < plusBtn.length; i++) {
-  minusBtn[i].addEventListener('click', function() {
+for (let i = 0; i < plusBtn.length; i++) {
+  minusBtn[i].addEventListener('click', function () {
     let thisCount = this.nextElementSibling;
     thisCount.innerText--;
-    if(thisCount.innerText < 0) {
+    if (thisCount.innerText < 0) {
       thisCount.innerText = 0;
     }
     let sum = this.closest('.korzina_counter').nextElementSibling.children[0].children[0];
-    if(sum.innerText <= 0) {
+    if (sum.innerText <= 0) {
       sum.innerText = 0;
     } else {
       sum.innerText = cost -= 495;
@@ -117,13 +117,13 @@ let productCost = document.getElementById('product-cost');
 let productCounter = document.getElementById('product-counter');
 let totalCost = 365;
 
-plusIcon.addEventListener('click', function() {
+plusIcon.addEventListener('click', function () {
   productCounter.innerText++;
   productCost.innerText = totalCost += 365;
 });
 
-minusIcon.addEventListener('click', function() {
-  if(productCost.innerText <= 0) {
+minusIcon.addEventListener('click', function () {
+  if (productCost.innerText <= 0) {
     productCost.innerText = 0;
     productCounter.innerText = 0;
   } else {
