@@ -173,6 +173,7 @@
     </div>
     <div class="categories">
         <div class="container">
+            <h1>Профессионалы • для • профессионалов</h1>
             <ul id="blog_head">
                 <li>
                     <a class="active" href="./hairs.html"><span>#</span>Блог</a>
@@ -200,12 +201,6 @@
     </div>
     <div class="catalog">
         <div class="container">
-            <div class="links">
-                <ul>
-                    <li><a href="./">Главная&#8194/</a></li>
-                    <li>&#8194Для профессионалов</li>
-                </ul>
-            </div>
             <div class="blog">
                 <div class="blog_header">
                     <h4>Онлайн-ресурсный центр, предназначенный для повышения квалификации лицензированных специалистов в области красоты.</h4>
@@ -218,15 +213,16 @@
                         </div>
                     </form>
                 </div>
-                <div class="links">
-                    <ul class="lk_menus">
-                        <li><a class="active" href="#">Все материалы</a></li>
+                <div class="links" id="blog_links">
+                    <ul>
+                        <li><a href="./">Главная&#8194/</a></li>
+                        <li>&#8194Для профессионалов</li>
+                    </ul>
+                    <ul class="lk_menus" id="lk_menus">
+                        <li><a class="_active" href="#">Все сатьи</a></li>
                         <li><a href="#">Окрашивание</a></li>
+                        <li><a href="#">Барберинг</a></li>
                         <li><a href="#">Депиляция</a></li>
-                        <li><a href="#">Депиляция</a></li>
-                        <li><a href="#">Косметология</a></li>
-                        <li><a href="#">Ресницы брови</a></li>
-                        <li><a href="#">Дезинфекция</a></li>
                     </ul>
                 </div>
                 <div class="blog_wrap">
@@ -388,7 +384,7 @@
                     </div>
                 </div>
                 <div class="footer_menu">
-                    <div class="footer_menu_item">
+                    <div class="footer_menu_item hide_footer_menu">
                         <h4>О компании</h4>
                         <ul>
                             <li><a href="#">О компании</a></li>
@@ -398,7 +394,7 @@
                             <li><a href="#">Контакты</a></li>
                         </ul>
                     </div>
-                    <div class="footer_menu_item">
+                    <div class="footer_menu_item hide_footer_menu">
                         <h4>Продукция</h4>
                         <div class="footer_extra">
                             <ul>
@@ -418,7 +414,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="footer_menu_item">
+                    <div class="footer_menu_item hide_footer_menu">
                         <h4>Сервисы</h4>
                         <ul>
                             <li><a href="#">Личный кабинет</a></li>
@@ -430,7 +426,7 @@
                             <li><a href="#">Доставка</a></li>
                         </ul>
                     </div>
-                    <div class="footer_menu_item">
+                    <div class="footer_menu_item hide_footer_menu">
                         <h4>Учебный центр</h4>
                         <ul>
                             <li><a href="#">Расписание</a></li>
@@ -451,9 +447,11 @@
                             </li>
                             <div class="mob_subtxt">
                                 <ul>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">О компании</a></li>
+                                    <li><a href="#">Новости</a></li>
+                                    <li><a href="#">Наши дипломы</a></li>
+                                    <li><a href="#">Социальная поддержка</a></li>
+                                    <li><a href="#">Контакты</a></li>
                                 </ul>
                             </div>
                             <li class="catalog_link">
@@ -464,9 +462,17 @@
                             </li>
                             <div class="mob_subtxt">
                                 <ul>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Акции</a></li>
+                                    <li><a href="#">Наши бренды</a></li>
+                                    <li><a href="#">Волосы</a></li>
+                                    <li><a href="#">Барбер</a></li>
+                                    <li><a href="#">Косметология</a></li>
+                                    <li><a href="#">Депиляция</a></li>
+                                    <li><a href="#">Брови и ресницы</a></li>
+                                <li><a href="#">Ногтевой сервис</a></li>
+                                <li><a href="#">Загар</a></li>
+                                <li><a href="#">Одноразовая продукция</a></li>
+                                <li><a href="#">Дезинфекция</a></li>
                                 </ul>
                             </div>
                             <li class="catalog_link">
@@ -477,9 +483,13 @@
                             </li>
                             <div class="mob_subtxt">
                                 <ul>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Личный кабинет</a></li>
+                                    <li><a href="#">Помощь</a></li>
+                                    <li><a href="#">Условия покупки</a></li>
+                                    <li><a href="#">Обмен и возврат</a></li>
+                                    <li><a href="#">PDF-каталог</a></li>
+                                    <li><a href="#">Оплата</a></li>
+                                    <li><a href="#">Доставка</a></li>
                                 </ul>
                             </div>
                             <li class="catalog_link">
@@ -490,9 +500,12 @@
                             </li>
                             <div class="mob_subtxt">
                                 <ul>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Расписание</a></li>
+                                    <li><a href="#">Медиа архив</a></li>
+                                    <li><a href="#">База знаний</a></li>
+                                    <li><a href="#">Ответы на вопросы о курсах</a></li>
+                                    <li><a href="#">О центре ИГРО</a></li>
+                                    <li><a href="#">Ищем моделей</a></li>
                                 </ul>
                             </div>
                         </ul>

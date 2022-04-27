@@ -1,13 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,900&family=Raleway&family=Source+Sans+Pro:wght@400;600;700&family=Ubuntu:wght@300;400&display=swap");
-
-@font-face {
-  font-family: "Century Gothic";
-  src: url(../fonts/centurygothic.ttf);
-}
-@font-face {
-  font-family: "Century Gothic Bold";
-  src: url(../fonts/centurygothic_bold.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,900&family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
 // Mixins for media queries:
 @mixin _1200px {
@@ -404,11 +395,52 @@ img {
         &.active {
           text-decoration: underline;
         }
+        &._active {
+          text-decoration: none;
+          background: #F0F0F0;
+        }
         strong {
           font-weight: 600;
         }
       }
     }
+  }
+  #lk_menus {
+    li {
+      margin: 0;
+      @include _768px() {
+        margin: 15px 0 15px !important;
+      }
+      @include _576px() {
+        width: 50%;
+      }
+      a {
+        padding: 16px 26px;
+        @include _576px() {
+          display: flex;
+          width: 100%;
+          justify-content: center;
+        }
+        &:hover {
+          background: #F0F0F0;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+#blog_links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 75%;
+  @include _1200px() {
+    max-width: 100%;
+  }
+  @include _768px() {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
   }
 }
 
@@ -712,6 +744,16 @@ img {
 .categories {
   padding: 5px 0;
   .container {
+    h1 {
+      @include _desc('Montserrat', 700, 28px, 34px, #000);
+      text-transform: uppercase;
+      text-align: center;
+      margin: 20px 0;
+      @include _576px() {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
     @include _991px() {
       padding: 0;
     }
@@ -762,250 +804,20 @@ img {
   }
   #blog_head {
     justify-content: center;
+    height: 50px;
+    align-items: center;
+    background: #F0F0F0;
     @include _991px() {
       justify-content: flex-start;
+      padding: 10px 0;
     }
     li {
       margin: 10px 20px;
       @include _576px() {
         margin: 10px;
       }
-    }
-  }
-}
-#header_new {
-  padding: 12px 0;
-  @include _890px() {
-    position: sticky;
-    top: -1px;
-    background: #fff;
-    z-index: 9999;
-    padding: 10px 0;
-    box-shadow: -1px -12px 20px #000;
-  }
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .header_city {
-      display: flex;
-      align-items: center;
-      h4 {
-        @include _desc("Century Gothic Bold", 700, 18px, 21px, #393939);
-        margin-right: 14px;
-        @include _576px() {
-          font-size: 14px;
-        }
-      }
-      .dropdown_item {
-        @include _desc("Century Gothic Bold", 700, 18px, 21px, #393939);
-        @include _576px() {
-          font-size: 14px;
-        }
-      }
-    }
-    .header_icons {
-      ul {
-        display: flex;
-        align-items: center;
-        li {
-          margin-left: 10px;
-          a,
-          span {
-            @include _desc("Ubuntu", 300, 14px, 24px, #393939);
-            display: flex;
-            align-items: center;
-            svg {
-              margin-right: 5px;
-            }
-            .hide_txt {
-              @include _890px() {
-                display: none;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-#header_new_two {
-  padding: 20px 0 0;
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .logo {
-      max-width: 600px;
-      width: 100%;
-      @include _890px() {
-        max-width: 100%;
-      }
-      .logo_wrap {
-        display: flex;
-        .logo_img {
-          img {
-            width: 60px;
-          }
-          @include _576px() {
-            display: none;
-          }
-        }
-        .search {
-          margin-left: 20px;
-          width: 100%;
-          @include _576px() {
-            margin-left: 0;
-          }
-          p {
-            @include _desc("Century Gothic", 400, 12px, 12px, #393939);
-            margin-bottom: 11px;
-            @include _576px() {
-              display: none;
-            }
-          }
-          form {
-            border: 1px solid #e0e0e0;
-            input {
-              @include _desc("Ubuntu", 400, 12px, 22px, #000);
-              min-height: 40px;
-              box-sizing: border-box;
-              border-radius: 3px;
-              padding: 0 24px 0 10px;
-              width: 98%;
-              background: url(../img/svg/search.svg);
-              background-repeat: no-repeat;
-              background-position: right 55%;
-            }
-          }
-        }
-      }
-      ul {
-        display: flex;
-        align-items: center;
-        margin-top: 20px;
-        @include _890px() {
-          display: none !important;
-        }
-        li {
-          margin-right: 16px;
-          &:last-child {
-            margin-right: 0;
-          }
-          a {
-            @include _desc("Century Gothic Bold", 700, 14px, 14px, #393939);
-          }
-        }
-      }
-    }
-    .phone {
-      text-align: right;
-      @include _890px() {
-        display: none !important;
-      }
       a {
-        @include _desc("Century Gothic Bold", 700, 24px, 34px, #393939);
-        @include _1024px() {
-          font-size: 21px;
-          line-height: 30px;
-        }
-      }
-      p {
-        @include _desc("Raleway", 400, 18px, 16px, #4f4f4f);
-        margin-top: 20px;
-        @include _1024px() {
-          font-size: 14px;
-        }
-      }
-    }
-  }
-}
-#categories_new {
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
-  @include _1024px() {
-    border-bottom: none !important;
-  }
-  .container {
-    @include _1024px() {
-      padding: 0 2px;
-    }
-    ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      @include _1024px() {
-        overflow-x: scroll;
-        justify-content: flex-start;
-      }
-      li {
-        margin: 0 5px;
-        padding: 12px 0;
-        @include _1024px() {
-          margin: 0 14px 0 0;
-        }
-        a {
-          @include _desc("Century Gothic Bold", 700, 14px, 14px, #4f4f4f);
-          padding: 12px 0;
-          display: flex;
-          width: max-content;
-          &:hover {
-            color: #1c5530;
-            border-bottom: 1px solid #1c5530;
-            text-decoration: none;
-            @include _1024px() {
-              border-bottom: none !important;
-            }
-          }
-          &.active {
-            color: #1c5530;
-            border-bottom: 1px solid #1c5530;
-            @include _1024px() {
-              border-bottom: none !important;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-#header_blocks {
-  .third_header {
-    background: transparent;
-    padding: 20px 0;
-    margin-top: 0;
-    @include _991px() {
-      flex-direction: column;
-    }
-    @include _576px() {
-      padding: 10px 0;
-    }
-    a {
-      max-width: 380px;
-      width: 100%;
-      min-height: 70px;
-      border-radius: 4px;
-      padding: 0 10px;
-      &:nth-child(2) {
-        @include _1200px() {
-          margin: 0 10px;
-        }
-        @include _991px() {
-          margin: 10px 0;
-        }
-      }
-      @include _991px() {
-        max-width: 576px;
-        width: 100%;
-      }
-      &:first-child {
-        background: #91a2a8;
-      }
-      &:nth-child(2) {
-        background: #989399;
-      }
-      &:nth-child(3) {
-        background: #949993;
+        text-transform: uppercase;
       }
     }
   }
@@ -1832,6 +1644,11 @@ footer {
               margin-left: 30px;
             }
           }
+        }
+      }
+      .hide_footer_menu {
+        @include _991px() {
+          display: none !important;
         }
       }
       .footer_menu_item_mob {
@@ -3495,7 +3312,7 @@ footer {
         padding: 0 0 30px;
       }
       h4 {
-        @include _desc("Montserrat", 500, 20px, 32px, #333);
+        @include _desc("Montserrat", 500, 16px, 22px, #333);
         max-width: 900px;
         text-align: center;
         @include _991px() {
@@ -3959,6 +3776,9 @@ footer {
       }
     }
   }
+}
+#catalogg {
+  padding: 0 0 20px;
 }
 // Страница Контакты:
 #contacts {
