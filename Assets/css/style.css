@@ -5827,6 +5827,8 @@ footer .footer_wrap .footer_last_txt a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 20px 0;
+  border-bottom: 1px solid #E0E0E0;
+  padding-bottom: 20px;
 }
 
 @media (max-width: 768px) {
@@ -5839,7 +5841,7 @@ footer .footer_wrap .footer_last_txt a {
         -ms-flex-pack: start;
             justify-content: flex-start;
     width: 100%;
-    margin: 10px 0 40px;
+    margin: 10px 0 20px;
   }
 }
 
